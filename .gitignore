@@ -1,0 +1,8 @@
+# Local editor/preview config (contains machine-specific absolute paths)
+.claude/
+
+# OS cruft
+.DS_Store
+
+# Source PMBOK material (copyrighted — keep out of the repo)
+*.pdf

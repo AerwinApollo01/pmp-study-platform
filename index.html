@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMP Exam Prep — PMBOK Guide 8th Edition</title>
+<style>
+  :root{
+    --bg:#0f1422; --panel:#1a2236; --panel2:#222c44; --ink:#eaf0ff; --muted:#9bb0d3;
+    --accent:#4f9cff; --accent2:#7c5cff; --good:#34d399; --bad:#f87171; --warn:#fbbf24;
+    --line:#2c3856; --radius:14px;
+  }
+  @media (prefers-color-scheme:light){
+    :root{--bg:#eef2fb;--panel:#fff;--panel2:#f3f6ff;--ink:#16203a;--muted:#5a6b8c;--line:#dbe3f5;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+  header{padding:18px 16px 10px;text-align:center;border-bottom:1px solid var(--line);background:var(--panel)}
+  h1{font-size:1.18rem;margin:0 0 2px}
+  .sub{color:var(--muted);font-size:.78rem}
+  nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;padding:10px;position:sticky;top:0;
+    background:var(--panel);border-bottom:1px solid var(--line);z-index:10}
+  nav button{flex:1 1 auto;min-width:84px;background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+    padding:9px 10px;border-radius:10px;font-size:.85rem;cursor:pointer;font-weight:600}
+  nav button[aria-selected="true"]{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}
+  main{max-width:760px;margin:0 auto;padding:16px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:14px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  label{font-size:.78rem;color:var(--muted);display:block;margin-bottom:3px}
+  select,input[type=number]{background:var(--panel2);color:var(--ink);border:1px solid var(--line);
+    border-radius:9px;padding:8px 10px;font-size:.9rem;width:100%}
+  .btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border:none;border-radius:10px;
+    padding:10px 16px;font-size:.9rem;font-weight:600;cursor:pointer}
+  .btn.ghost{background:var(--panel2);color:var(--ink);border:1px solid var(--line)}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .tag{display:inline-block;font-size:.66rem;padding:2px 7px;border-radius:20px;background:var(--panel2);
+    border:1px solid var(--line);color:var(--muted);margin:2px 3px 2px 0}
+  .tag.eco{background:rgba(251,191,36,.16);color:var(--warn);border-color:transparent}
+  .tag.dom{background:rgba(79,156,255,.16);color:var(--accent);border-color:transparent}
+  .src{font-size:.72rem;color:var(--muted);font-style:italic;margin-top:8px}
+  /* Flashcard */
+  .card{perspective:1200px;cursor:pointer;margin:10px 0}
+  .card-inner{position:relative;transition:transform .5s;transform-style:preserve-3d;min-height:190px}
+  .card.flipped .card-inner{transform:rotateY(180deg)}
+  .face{position:absolute;inset:0;backface-visibility:hidden;background:var(--panel2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;justify-content:center}
+  .face.back{transform:rotateY(180deg)}
+  .face .q{font-size:1.05rem;font-weight:600}
+  .face .a{font-size:.95rem}
+  .hint{text-align:center;color:var(--muted);font-size:.72rem;margin-top:6px}
+  /* Quiz */
+  .opt{display:block;width:100%;text-align:left;background:var(--panel2);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:11px 13px;margin:7px 0;font-size:.92rem;cursor:pointer}
+  .opt:hover:not(:disabled){border-color:var(--accent)}
+  .opt.correct{background:rgba(52,211,153,.18);border-color:var(--good)}
+  .opt.wrong{background:rgba(248,113,113,.18);border-color:var(--bad)}
+  .opt:disabled{cursor:default}
+  .feedback{margin-top:10px;padding:11px;border-radius:10px;background:var(--panel2);border:1px solid var(--line)}
+  .feedback.ok{border-color:var(--good)} .feedback.no{border-color:var(--bad)}
+  .stem{font-size:1rem;font-weight:600;margin:6px 0 4px}
+  .progress{height:8px;background:var(--panel2);border-radius:20px;overflow:hidden;margin:8px 0}
+  .progress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  /* EVM */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .res{display:grid;grid-template-columns:1fr;gap:8px}
+  .resitem{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .resitem .name{font-weight:700;font-size:.9rem}
+  .resitem .val{font-size:1.15rem;font-weight:700;color:var(--accent)}
+  .resitem .f{font-size:.74rem;color:var(--muted);font-family:ui-monospace,Menlo,monospace}
+  .resitem .interp{font-size:.78rem;margin-top:3px}
+  .num.good{color:var(--good)} .num.bad{color:var(--bad)}
+  /* Dashboard */
+  .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+  .stat .b{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .stat .big{font-size:1.5rem;font-weight:800}
+  .bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:.82rem}
+  .bar .label{width:120px;flex:0 0 auto;color:var(--muted)}
+  .bar .track{flex:1;height:14px;background:var(--panel2);border-radius:8px;overflow:hidden}
+  .bar .track>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
+  .bar .pct{width:54px;text-align:right;flex:0 0 auto}
+  .weak li{margin:4px 0;font-size:.85rem}
+  .muted{color:var(--muted)} .center{text-align:center}
+  .banner{background:rgba(251,191,36,.12);border:1px solid var(--warn);color:var(--ink);padding:9px 12px;
+    border-radius:10px;font-size:.8rem;margin-bottom:12px}
+  footer{text-align:center;color:var(--muted);font-size:.72rem;padding:18px}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>PMP Exam Prep</h1>
+  <div class="sub">PMBOK&reg; Guide — 8th Edition &middot; flashcards &middot; quiz &middot; EVM &middot; progress</div>
+</header>
+<nav role="tablist" aria-label="Study modes">
+  <button role="tab" aria-selected="true" data-view="flash">Flashcards</button>
+  <button role="tab" aria-selected="false" data-view="quiz">Quiz</button>
+  <button role="tab" aria-selected="false" data-view="evm">EVM Calc</button>
+  <button role="tab" aria-selected="false" data-view="dash">Dashboard</button>
+</nav>
+<main>
+  <div id="loadmsg" class="banner hidden"></div>
+
+  <!-- ===== FLASHCARDS ===== -->
+  <section id="flash" role="tabpanel">
+    <div class="panel">
+      <div class="row">
+        <div style="flex:1;min-width:160px">
+          <label for="fcTopic">Filter by topic</label>
+          <select id="fcTopic"><option value="all">All topics</option></select>
+        </div>
+        <div style="flex:1;min-width:120px">
+          <label for="fcType">Type</label>
+          <select id="fcType">
+            <option value="all">All</option>
+            <option value="term">Terms</option>
+            <option value="process">Processes</option>
+            <option value="formula">Formulas</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <label style="margin:0"><input type="checkbox" id="fcMissed"> Prioritize missed (spaced repetition)</label>
+      </div>
+    </div>
+    <div class="panel">
+      <div id="fcCount" class="muted center" style="font-size:.78rem"></div>
+      <div class="card" id="fcCard" tabindex="0" role="button" aria-label="Flashcard, click to flip">
+        <div class="card-inner">
+          <div class="face front"><div class="q" id="fcFront"></div><div class="hint">click to flip</div></div>
+          <div class="face back"><div class="a" id="fcBack"></div></div>
+        </div>
+      </div>
+      <div id="fcTags" class="center"></div>
+      <div class="src" id="fcSrc"></div>
+      <div class="row" style="margin-top:12px;justify-content:space-between">
+        <button class="btn ghost" id="fcPrev">&larr; Prev</button>
+        <div class="row">
+          <button class="btn ghost" id="fcGotWrong" title="Mark to resurface">Got it wrong</button>
+          <button class="btn ghost" id="fcGotRight">Got it</button>
+        </div>
+        <button class="btn ghost" id="fcNext">Next &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz" role="tabpanel" class="hidden">
+    <div class="panel" id="quizSetup">
+      <div class="grid2">
+        <div>
+          <label for="qzDomain">ECO Domain</label>
+          <select id="qzDomain">
+            <option value="all">All (exam-weighted)</option>
+            <option value="People">People (42%)</option>
+            <option value="Process">Process (50%)</option>
+            <option value="Business">Business (8%)</option>
+          </select>
+        </div>
+        <div>
+          <label for="qzApproach">Approach</label>
+          <select id="qzApproach">
+            <option value="all">All</option>
+            <option value="Predictive">Predictive</option>
+            <option value="Agile/Hybrid">Agile / Hybrid</option>
+          </select>
+        </div>
+        <div>
+          <label for="qzTopic">Topic</label>
+          <select id="qzTopic"><option value="all">All topics</option></select>
+        </div>
+        <div>
+          <label for="qzLen">Number of questions</label>
+          <select id="qzLen">
+            <option value="10">10</option><option value="20">20</option>
+            <option value="30">30</option><option value="0">All matching</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <label style="margin:0"><input type="checkbox" id="qzMissed"> Prioritize previously missed</label>
+        <label style="margin:0"><input type="checkbox" id="qzSit"> Situational only</label>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn" id="qzStart">Start quiz</button>
+        <span id="qzAvail" class="muted" style="font-size:.8rem"></span>
+      </div>
+    </div>
+
+    <div id="quizRun" class="hidden">
+      <div class="panel">
+        <div class="progress"><i id="qzBar" style="width:0%"></i></div>
+        <div class="row" style="justify-content:space-between;font-size:.8rem" class="muted">
+          <span id="qzPos" class="muted"></span><span id="qzScore" class="muted"></span>
+        </div>
+        <div id="qzTags" style="margin-top:6px"></div>
+        <div class="stem" id="qzStem"></div>
+        <div id="qzOpts"></div>
+        <div id="qzFeedback"></div>
+        <div class="row" style="margin-top:12px;justify-content:flex-end">
+          <button class="btn" id="qzNext" disabled>Next</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="quizDone" class="hidden">
+      <div class="panel center">
+        <h2 id="qzFinal"></h2>
+        <p class="muted" id="qzFinalSub"></p>
+        <button class="btn" id="qzRestart">New quiz</button>
+        <button class="btn ghost" id="qzReview">Review answers</button>
+      </div>
+      <div id="qzReviewList"></div>
+    </div>
+  </section>
+
+  <!-- ===== EVM ===== -->
+  <section id="evm" role="tabpanel" class="hidden">
+    <div class="panel">
+      <p class="muted" style="font-size:.82rem;margin-top:0">Enter the four core inputs. All EVM metrics compute live, each with its formula and interpretation.</p>
+      <div class="grid2">
+        <div><label for="ePV">PV — Planned Value</label><input type="number" id="ePV" value="1000"></div>
+        <div><label for="eEV">EV — Earned Value</label><input type="number" id="eEV" value="900"></div>
+        <div><label for="eAC">AC — Actual Cost</label><input type="number" id="eAC" value="1100"></div>
+        <div><label for="eBAC">BAC — Budget at Completion</label><input type="number" id="eBAC" value="4000"></div>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <label style="margin:0"><input type="checkbox" id="eAtypical"> Treat current variance as atypical (one-off)</label>
+      </div>
+    </div>
+    <div class="panel"><div class="res" id="evmOut"></div></div>
+  </section>
+
+  <!-- ===== DASHBOARD ===== -->
+  <section id="dash" role="tabpanel" class="hidden">
+    <div class="panel">
+      <h2 style="margin-top:0;font-size:1rem">Session score</h2>
+      <div class="stat">
+        <div class="b"><div class="big" id="dScore">0%</div><div class="muted" style="font-size:.74rem">Correct</div></div>
+        <div class="b"><div class="big" id="dAnswered">0</div><div class="muted" style="font-size:.74rem">Q answered</div></div>
+        <div class="b"><div class="big" id="dReviewed">0</div><div class="muted" style="font-size:.74rem">Cards reviewed</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h2 style="margin-top:0;font-size:1rem">% correct by topic</h2>
+      <div id="dTopics"><p class="muted" style="font-size:.85rem">Answer some quiz questions to see your breakdown.</p></div>
+    </div>
+    <div class="panel">
+      <h2 style="margin-top:0;font-size:1rem">Weak areas (resurfaced more often)</h2>
+      <ul class="weak" id="dWeak"><li class="muted">No misses yet — nice.</li></ul>
+      <button class="btn ghost" id="dReset" style="margin-top:8px">Reset session</button>
+    </div>
+  </section>
+</main>
+<footer>
+  In-memory session only — no data leaves this page. PMBOK&reg; is a registered mark of the Project Management Institute, Inc.
+</footer>
+
+<script>
+"use strict";
+/* ============ Fallback content (used only if fetch fails on file://) ============ */
+const FALLBACK = {
+  meta:{title:"PMP (fallback)",ecoWeighting:{People:.42,Process:.5,Business:.08}},
+  taxonomy:{topics:["Formulas/EVM","Risk","Scope"]},
+  formulas:[],
+  flashcards:[
+    {id:"fb1",type:"term",front:"Risk vs. Issue",back:"Risk = potential/uncertain future event. Issue = already occurred, needs action.",topic:"Risk",ecoDomain:"Process",approach:"Both",source:"Study Guide §3.7",ecoExtended:false}
+  ],
+  questions:[
+    {id:"fbq1",topic:"Formulas/EVM",ecoDomain:"Process",approach:"Predictive",situational:false,ecoExtended:false,source:"PMI EVM",stem:"BAC=100000, CPI=0.8, expected to continue. EAC?",options:["80000","100000","125000","120000"],answerIndex:2,explanation:"EAC=BAC/CPI=125000."}
+  ]
+};
+
+let DATA=null;
+const state={
+  fcIndex:0, fcList:[],
+  quiz:null,
+  // spaced repetition / progress, in-memory only
+  qStats:{},          // id -> {right,wrong}
+  fcReviewed:new Set(),
+  fcMiss:{},          // flashcard id -> miss count
+  topicStats:{}       // topic -> {right,wrong}
+};
+
+/* ---------- load ---------- */
+async function load(){
+  try{
+    const r=await fetch("content.json",{cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    DATA=await r.json();
+  }catch(e){
+    DATA=FALLBACK;
+    const b=document.getElementById("loadmsg");
+    b.classList.remove("hidden");
+    b.textContent="⚠ Could not fetch content.json (opened via file://?). Running a tiny built-in fallback. For the full bank, serve the folder (see README) — e.g. 'python3 -m http.server'.";
+  }
+  initTopics(); initFlash(); initQuizControls(); initEVM(); refreshDash();
+}
+
+/* ---------- helpers ---------- */
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a;}
+function uniq(arr){return [...new Set(arr)];}
+function el(id){return document.getElementById(id);}
+
+/* ---------- nav ---------- */
+document.querySelectorAll('nav button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.setAttribute('aria-selected',x===b));
+    document.querySelectorAll('main > section').forEach(s=>s.classList.add('hidden'));
+    el(b.dataset.view).classList.remove('hidden');
+    if(b.dataset.view==='dash') refreshDash();
+  });
+});
+
+/* ---------- topic selects ---------- */
+function initTopics(){
+  const topics=uniq(DATA.flashcards.map(f=>f.topic).concat(DATA.questions.map(q=>q.topic))).sort();
+  const fc=el('fcTopic'), qz=el('qzTopic');
+  topics.forEach(t=>{
+    fc.insertAdjacentHTML('beforeend',`<option value="${t}">${t}</option>`);
+    qz.insertAdjacentHTML('beforeend',`<option value="${t}">${t}</option>`);
+  });
+}
+
+/* ============ FLASHCARDS ============ */
+function buildFcList(){
+  const topic=el('fcTopic').value, type=el('fcType').value, missed=el('fcMissed').checked;
+  let list=DATA.flashcards.filter(f=>
+    (topic==='all'||f.topic===topic) && (type==='all'||f.type===type));
+  if(missed){
+    list.sort((a,b)=>(state.fcMiss[b.id]||0)-(state.fcMiss[a.id]||0));
+  }else{
+    list=shuffle(list);
+  }
+  state.fcList=list; state.fcIndex=0;
+}
+function renderFc(){
+  const c=el('fcCard'); c.classList.remove('flipped');
+  const f=state.fcList[state.fcIndex];
+  el('fcCount').textContent=state.fcList.length?`Card ${state.fcIndex+1} of ${state.fcList.length}`:'No cards match the filter.';
+  if(!f){el('fcFront').textContent='';el('fcBack').textContent='';el('fcTags').innerHTML='';el('fcSrc').textContent='';return;}
+  el('fcFront').textContent=f.front;
+  el('fcBack').textContent=f.back;
+  el('fcTags').innerHTML=
+    `<span class="tag dom">${f.ecoDomain}</span><span class="tag">${f.topic}</span><span class="tag">${f.approach}</span>`+
+    (f.ecoExtended?'<span class="tag eco">ECO-extended</span>':'')+
+    ((state.fcMiss[f.id]||0)>0?`<span class="tag" style="color:var(--bad)">missed ×${state.fcMiss[f.id]}</span>`:'');
+  el('fcSrc').textContent='Source: '+f.source;
+  state.fcReviewed.add(f.id);
+}
+function initFlash(){
+  ['fcTopic','fcType','fcMissed'].forEach(id=>el(id).addEventListener('change',()=>{buildFcList();renderFc();}));
+  const flip=()=>el('fcCard').classList.toggle('flipped');
+  el('fcCard').addEventListener('click',flip);
+  el('fcCard').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}});
+  el('fcNext').addEventListener('click',()=>{if(state.fcIndex<state.fcList.length-1){state.fcIndex++;renderFc();}});
+  el('fcPrev').addEventListener('click',()=>{if(state.fcIndex>0){state.fcIndex--;renderFc();}});
+  el('fcGotRight').addEventListener('click',()=>{const f=state.fcList[state.fcIndex];if(f&&state.fcMiss[f.id])state.fcMiss[f.id]=Math.max(0,state.fcMiss[f.id]-1);advanceFc();});
+  el('fcGotWrong').addEventListener('click',()=>{const f=state.fcList[state.fcIndex];if(f)state.fcMiss[f.id]=(state.fcMiss[f.id]||0)+1;advanceFc();});
+  buildFcList();renderFc();
+}
+function advanceFc(){refreshDash();if(state.fcIndex<state.fcList.length-1){state.fcIndex++;renderFc();}else renderFc();}
+
+/* ============ QUIZ ============ */
+function matchingQuestions(){
+  const dom=el('qzDomain').value, ap=el('qzApproach').value, tp=el('qzTopic').value, sit=el('qzSit').checked;
+  return DATA.questions.filter(q=>
+    (dom==='all'||q.ecoDomain===dom)&&
+    (ap==='all'||q.approach===ap||q.approach==='Both')&&
+    (tp==='all'||q.topic===tp)&&
+    (!sit||q.situational));
+}
+function updateAvail(){
+  el('qzAvail').textContent=matchingQuestions().length+' questions match';
+}
+function initQuizControls(){
+  ['qzDomain','qzApproach','qzTopic','qzSit'].forEach(id=>el(id).addEventListener('change',updateAvail));
+  updateAvail();
+  el('qzStart').addEventListener('click',startQuiz);
+  el('qzNext').addEventListener('click',nextQ);
+  el('qzRestart').addEventListener('click',()=>{el('quizDone').classList.add('hidden');el('quizSetup').classList.remove('hidden');});
+  el('qzReview').addEventListener('click',()=>el('qzReviewList').classList.toggle('hidden'));
+}
+function startQuiz(){
+  let pool=matchingQuestions();
+  if(!pool.length){alert('No questions match those filters.');return;}
+  if(el('qzMissed').checked){
+    pool=pool.slice().sort((a,b)=>missScore(b)-missScore(a)); // missed first
+  }else pool=shuffle(pool);
+  let n=parseInt(el('qzLen').value,10); if(n===0||n>pool.length)n=pool.length;
+  // build each question with shuffled options, preserving correct
+  const items=pool.slice(0,n).map(q=>{
+    const order=shuffle(q.options.map((o,i)=>i));
+    return {q, order, correctPos:order.indexOf(q.answerIndex), chosen:null};
+  });
+  state.quiz={items,cur:0,right:0};
+  el('quizSetup').classList.add('hidden');el('quizDone').classList.add('hidden');
+  el('quizRun').classList.remove('hidden');el('qzReviewList').classList.add('hidden');
+  renderQ();
+}
+function missScore(q){const s=state.qStats[q.id];return s?s.wrong*2-s.right:0;}
+function renderQ(){
+  const Q=state.quiz, it=Q.items[Q.cur], q=it.q;
+  el('qzBar').style.width=((Q.cur)/Q.items.length*100)+'%';
+  el('qzPos').textContent=`Question ${Q.cur+1} of ${Q.items.length}`;
+  el('qzScore').textContent=`Score: ${Q.right}/${Q.cur}`;
+  el('qzTags').innerHTML=`<span class="tag dom">${q.ecoDomain}</span><span class="tag">${q.topic}</span>`+
+    (q.situational?'<span class="tag">situational</span>':'')+(q.ecoExtended?'<span class="tag eco">ECO-extended</span>':'');
+  el('qzStem').textContent=q.stem;
+  const opts=el('qzOpts');opts.innerHTML='';
+  it.order.forEach((origIdx,pos)=>{
+    const b=document.createElement('button');
+    b.className='opt';b.textContent=q.options[origIdx];
+    b.addEventListener('click',()=>choose(pos));
+    opts.appendChild(b);
+  });
+  el('qzFeedback').innerHTML='';el('qzNext').disabled=true;
+  el('qzNext').textContent=(Q.cur===Q.items.length-1)?'Finish':'Next';
+}
+function choose(pos){
+  const Q=state.quiz, it=Q.items[Q.cur]; if(it.chosen!==null)return;
+  it.chosen=pos;
+  const correct=(pos===it.correctPos);
+  if(correct){Q.right++;}
+  // record stats
+  const q=it.q, s=state.qStats[q.id]||(state.qStats[q.id]={right:0,wrong:0});
+  correct?s.right++:s.wrong++;
+  const ts=state.topicStats[q.topic]||(state.topicStats[q.topic]={right:0,wrong:0});
+  correct?ts.right++:ts.wrong++;
+  // paint
+  const btns=el('qzOpts').querySelectorAll('.opt');
+  btns.forEach((b,i)=>{b.disabled=true;
+    if(i===it.correctPos)b.classList.add('correct');
+    if(i===pos&&!correct)b.classList.add('wrong');});
+  el('qzFeedback').innerHTML=
+    `<div class="feedback ${correct?'ok':'no'}"><strong>${correct?'✓ Correct':'✗ Incorrect'}</strong>`+
+    `<div style="margin-top:5px">${q.explanation}</div>`+
+    `<div class="src">Source: ${q.source}</div></div>`;
+  el('qzNext').disabled=false;
+  refreshDash();
+}
+function nextQ(){
+  const Q=state.quiz;
+  if(Q.cur<Q.items.length-1){Q.cur++;renderQ();}
+  else finishQuiz();
+}
+function finishQuiz(){
+  const Q=state.quiz, pct=Math.round(Q.right/Q.items.length*100);
+  el('quizRun').classList.add('hidden');el('quizDone').classList.remove('hidden');
+  el('qzFinal').textContent=`${pct}%  (${Q.right}/${Q.items.length})`;
+  el('qzFinalSub').textContent=pct>=80?'Above the typical PMP passing zone — strong work.':
+    pct>=60?'Getting there — review the misses below.':'Keep drilling the weak areas shown on the dashboard.';
+  // review list
+  const rl=el('qzReviewList');rl.classList.add('hidden');rl.innerHTML='';
+  Q.items.forEach((it,n)=>{
+    const q=it.q, ok=it.chosen===it.correctPos;
+    rl.insertAdjacentHTML('beforeend',
+      `<div class="panel"><div class="row" style="justify-content:space-between">
+        <strong>Q${n+1}. ${ok?'✓':'✗'}</strong><span class="tag dom">${q.ecoDomain}</span></div>
+       <div class="stem" style="font-size:.92rem">${q.stem}</div>
+       <div style="font-size:.86rem">Correct: <strong>${q.options[q.answerIndex]}</strong></div>
+       <div class="feedback ${ok?'ok':'no'}" style="margin-top:6px;font-size:.85rem">${q.explanation}<div class="src">Source: ${q.source}</div></div></div>`);
+  });
+}
+
+/* ============ EVM ============ */
+function initEVM(){['ePV','eEV','eAC','eBAC','eAtypical'].forEach(id=>el(id).addEventListener('input',computeEVM));computeEVM();}
+function fmt(n){if(!isFinite(n))return '—';return (Math.round(n*100)/100).toLocaleString();}
+function computeEVM(){
+  const PV=+el('ePV').value, EV=+el('eEV').value, AC=+el('eAC').value, BAC=+el('eBAC').value;
+  const atyp=el('eAtypical').checked;
+  const SV=EV-PV, CV=EV-AC, SPI=PV?EV/PV:NaN, CPI=AC?EV/AC:NaN;
+  const EAC_cpi=CPI?BAC/CPI:NaN;
+  const EAC_atyp=AC+(BAC-EV);
+  const EAC_both=(CPI&&SPI)?AC+((BAC-EV)/(CPI*SPI)):NaN;
+  const EAC=atyp?EAC_atyp:EAC_cpi;
+  const ETC=EAC-AC, VAC=BAC-EAC;
+  const TCPI_bac=(BAC-AC)?(BAC-EV)/(BAC-AC):NaN;
+  const TCPI_eac=(EAC-AC)?(BAC-EV)/(EAC-AC):NaN;
+  const sign=(v,goodHigh=true)=>{if(!isFinite(v))return '';const good=goodHigh?v>=0:v<=0;return `<span class="num ${good?'good':'bad'}">`;};
+  const idxClass=v=>!isFinite(v)?'':`<span class="num ${v>=1?'good':'bad'}">`;
+  const out=[
+    ['Schedule Variance (SV)','SV = EV − PV',`${sign(SV)}${fmt(SV)}</span>`,SV>=0?'Ahead of / on schedule':'Behind schedule'],
+    ['Cost Variance (CV)','CV = EV − AC',`${sign(CV)}${fmt(CV)}</span>`,CV>=0?'Under / on budget':'Over budget'],
+    ['Schedule Performance Index (SPI)','SPI = EV ÷ PV',`${idxClass(SPI)}${fmt(SPI)}</span>`,SPI>=1?'Ahead of / on schedule':'Behind schedule'],
+    ['Cost Performance Index (CPI)','CPI = EV ÷ AC',`${idxClass(CPI)}${fmt(CPI)}</span>`,CPI>=1?'Under / on budget':'Over budget'],
+    ['EAC — CPI (typical)','EAC = BAC ÷ CPI',fmt(EAC_cpi),'Use when current CPI will continue (default).'],
+    ['EAC — atypical (one-off)','EAC = AC + (BAC − EV)',fmt(EAC_atyp),'Use when the variance is a one-time event.'],
+    ['EAC — cost & schedule','EAC = AC + [(BAC − EV) ÷ (CPI × SPI)]',fmt(EAC_both),'Use when both cost & schedule affect remaining work.'],
+    ['EAC — new estimate','EAC = AC + bottom-up ETC','(re-estimate)','Use when the original estimate is fundamentally flawed.'],
+    ['Selected EAC',''+(atyp?'atypical variant':'CPI variant'),`<strong>${fmt(EAC)}</strong>`,'Drives ETC and VAC below; toggle the checkbox to switch.'],
+    ['Estimate to Complete (ETC)','ETC = EAC − AC',fmt(ETC),'Cost expected to finish remaining work.'],
+    ['Variance at Completion (VAC)','VAC = BAC − EAC',`${sign(VAC)}${fmt(VAC)}</span>`,VAC>=0?'Forecast under budget at finish':'Forecast over budget at finish'],
+    ['TCPI — to BAC','(BAC − EV) ÷ (BAC − AC)',`${idxClass(2-TCPI_bac)}${fmt(TCPI_bac)}</span>`,TCPI_bac>1?'Remaining work must beat plan to hit BAC':'Original budget still achievable'],
+    ['TCPI — to EAC','(BAC − EV) ÷ (EAC − AC)',fmt(TCPI_eac),'Efficiency needed against an approved new EAC.']
+  ];
+  el('evmOut').innerHTML=out.map(r=>
+    `<div class="resitem"><div class="name">${r[0]}</div><div class="f">${r[1]}</div>
+     <div class="val">${r[2]}</div><div class="interp muted">${r[3]}</div></div>`).join('');
+}
+
+/* ============ DASHBOARD ============ */
+function refreshDash(){
+  let r=0,w=0;Object.values(state.qStats).forEach(s=>{r+=s.right;w+=s.wrong;});
+  const ans=r+w;
+  el('dScore').textContent=ans?Math.round(r/ans*100)+'%':'0%';
+  el('dAnswered').textContent=ans;
+  el('dReviewed').textContent=state.fcReviewed.size;
+  // topics
+  const td=el('dTopics');const ts=state.topicStats;
+  const keys=Object.keys(ts).filter(k=>ts[k].right+ts[k].wrong>0);
+  if(!keys.length){td.innerHTML='<p class="muted" style="font-size:.85rem">Answer some quiz questions to see your breakdown.</p>';}
+  else{
+    td.innerHTML=keys.sort().map(k=>{
+      const t=ts[k],n=t.right+t.wrong,p=Math.round(t.right/n*100);
+      return `<div class="bar"><span class="label" title="${k}">${k}</span>
+        <span class="track"><i style="width:${p}%"></i></span><span class="pct">${p}%</span></div>`;
+    }).join('');
+  }
+  // weak areas
+  const weak=Object.entries(ts).filter(([,t])=>t.wrong>0)
+    .map(([k,t])=>({k,wrong:t.wrong,n:t.right+t.wrong,p:Math.round(t.right/(t.right+t.wrong)*100)}))
+    .sort((a,b)=>a.p-b.p);
+  el('dWeak').innerHTML=weak.length?weak.map(x=>
+    `<li><strong style="color:var(--bad)">${x.k}</strong> — ${x.p}% (${x.wrong} missed of ${x.n})</li>`).join('')
+    :'<li class="muted">No misses yet — nice.</li>';
+}
+el('dReset').addEventListener('click',()=>{
+  state.qStats={};state.topicStats={};state.fcReviewed=new Set();state.fcMiss={};
+  if(state.quiz)state.quiz=null;
+  refreshDash();alert('Session reset.');
+});
+
+load();
+</script>
+</body>
+</html>
