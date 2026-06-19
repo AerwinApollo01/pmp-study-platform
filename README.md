@@ -64,9 +64,16 @@ built-in question set. **Use the live URL or a local server for the full bank.**
    - **Compression** — finds the cheapest critical-path crash to shorten N periods.
    - **Methods Reference** — PDM relationships, leads/lags, crashing vs. fast-tracking,
      leveling vs. smoothing, rolling wave, and adaptive scheduling (all source-cited).
-6. **Spaced repetition** — right/wrong is tracked per item for the session; missed items can be
+6. **Exam simulator** — a timed mock exam under real-PMP conditions: exam-weighted sampling
+   (People 42% / Process 50% / Business 8%), a countdown timer (1.3 min/question) with
+   auto-submit, a question navigator (answered / flagged / current) with flag-for-review, and
+   no feedback until you submit. The end report shows an overall score, an Above Target /
+   Target / Below Target band, readiness gauges by ECO domain / approach / topic, and a full
+   review with a wrong-only filter. (Bands are a study heuristic — PMI does not publish exact
+   cut scores.) Choose 30 / 60 / 90 / full-bank, timed or untimed.
+7. **Spaced repetition** — right/wrong is tracked per item for the session; missed items can be
    resurfaced first in both quiz and flashcards.
-7. **Dashboard** — session score, % correct by topic, items reviewed, and a ranked weak-areas list.
+8. **Dashboard** — session score, % correct by topic, items reviewed, and a ranked weak-areas list.
 
 > Session data is held **in memory only** — refreshing the page starts a clean session.
 > (No `localStorage`/`sessionStorage`, by design.)
