@@ -4047,6 +4047,330 @@
       ],
       "answerIndex": 1,
       "explanation": "When time allows and the team has the expertise, facilitate their ownership of the decision rather than deciding for them."
+    },
+    {
+      "id": "q-156",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (Tuckman)",
+      "stem": "A team is in the Norming stage of development. What shift should the PM make?",
+      "options": [
+        "Tighten top-down control",
+        "Move from directing toward enabling, supporting the team's growing self-management",
+        "Re-form the team",
+        "Stop all coaching"
+      ],
+      "answerIndex": 1,
+      "explanation": "As norms form, the leader transitions from directing/coaching toward a supporting, enabling style."
+    },
+    {
+      "id": "q-157",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (Tuckman)",
+      "stem": "Which is the strongest sign a team has reached the Performing stage?",
+      "options": [
+        "The PM assigns every task",
+        "The team self-organizes, resolves issues independently, and delivers consistently",
+        "Conflict is at its peak",
+        "Members avoid each other"
+      ],
+      "answerIndex": 1,
+      "explanation": "Performing teams are autonomous, high-trust, and resolve problems themselves with consistent delivery."
+    },
+    {
+      "id": "q-158",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (communication/EI)",
+      "stem": "A stakeholder sends an angry email about a missed update. The BEST first response is to:",
+      "options": [
+        "Reply defending the team in writing",
+        "Reach out directly (call/meet) to listen, acknowledge the impact, and agree on next steps",
+        "Forward it to the sponsor",
+        "Ignore it until emotions cool"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sensitive interpersonal issues are best handled with direct, two-way communication that acknowledges feelings and resolves the gap."
+    },
+    {
+      "id": "q-159",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (decision-making)",
+      "stem": "The PM wants decisions the whole team will commit to. Which technique best builds genuine buy-in?",
+      "options": [
+        "Unilateral decision by the PM",
+        "Participatory decision-making with the team (e.g., facilitated consensus)",
+        "Deciding by seniority only",
+        "Anonymous survey with no discussion"
+      ],
+      "answerIndex": 1,
+      "explanation": "Collaborative, participatory decision-making produces stronger commitment and ownership than top-down calls."
+    },
+    {
+      "id": "q-160",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (negotiation/leadership)",
+      "stem": "A motivated team is being micromanaged by a functional manager, hurting morale. The PM should:",
+      "options": [
+        "Tell the team to tolerate it",
+        "Have a candid conversation with the functional manager about impact and agree on appropriate autonomy",
+        "Escalate immediately to the sponsor",
+        "Reassign the whole team"
+      ],
+      "answerIndex": 1,
+      "explanation": "Address it directly and collaboratively with the manager first, negotiating appropriate team autonomy."
+    },
+    {
+      "id": "q-161",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (conflict)",
+      "stem": "Which best describes the PM's role regarding team conflict?",
+      "options": [
+        "Suppress all conflict immediately",
+        "Recognize that healthy task conflict can be productive and facilitate constructive resolution",
+        "Always decide the outcome personally",
+        "Avoid involvement entirely"
+      ],
+      "answerIndex": 1,
+      "explanation": "Some task-focused conflict is healthy; the PM facilitates constructive resolution rather than suppressing or avoiding it."
+    },
+    {
+      "id": "q-162",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (team development)",
+      "stem": "A new contractor joins mid-project and is unclear on norms and goals. The fastest way to integrate them is to:",
+      "options": [
+        "Let them observe for a few weeks",
+        "Onboard them with the team charter, goals, and a buddy/mentor",
+        "Give them low-value tasks indefinitely",
+        "Wait for them to ask questions"
+      ],
+      "answerIndex": 1,
+      "explanation": "Sharing the team charter/goals and pairing them with a mentor accelerates integration and shared norms."
+    },
+    {
+      "id": "q-163",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (emotional intelligence)",
+      "stem": "During a heated discussion, the PM notices their own rising frustration. The most emotionally intelligent action is to:",
+      "options": [
+        "Express the frustration forcefully to be authentic",
+        "Pause, self-regulate, and respond deliberately rather than react",
+        "End the relationship with that stakeholder",
+        "Suppress it and disengage permanently"
+      ],
+      "answerIndex": 1,
+      "explanation": "Self-awareness plus self-regulation — pausing to respond rather than react — is core emotional intelligence."
+    },
+    {
+      "id": "q-164",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (psychological safety)",
+      "stem": "A team member proposes an idea that the PM thinks is flawed. To preserve psychological safety, the PM should:",
+      "options": [
+        "Dismiss it quickly to save time",
+        "Acknowledge the contribution and explore it openly before discussing concerns",
+        "Ignore it",
+        "Criticize it publicly so others learn"
+      ],
+      "answerIndex": 1,
+      "explanation": "Valuing contributions and exploring them openly keeps people willing to speak up — protecting psychological safety."
+    },
+    {
+      "id": "q-165",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (situational leadership)",
+      "stem": "Which leadership approach best fits a crisis requiring an immediate, time-critical decision?",
+      "options": [
+        "Lengthy consensus-building",
+        "A more directive style to act decisively, then debrief with the team after",
+        "Withdrawing to avoid pressure",
+        "Delegating the crisis entirely and stepping away"
+      ],
+      "answerIndex": 1,
+      "explanation": "Situational leadership: a directive style suits genuine time-critical crises; revert to collaboration afterward."
+    },
+    {
+      "id": "q-166",
+      "topic": "Procurement",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (team agreements)",
+      "stem": "A vendor's on-site staff and your team are clashing over working styles. The PM should:",
+      "options": [
+        "Separate them and limit interaction permanently",
+        "Facilitate shared ground rules and a team agreement covering both groups",
+        "Replace the vendor",
+        "Let each group work in isolation"
+      ],
+      "answerIndex": 1,
+      "explanation": "Establishing shared ground rules/agreements across both groups builds a common working culture."
+    },
+    {
+      "id": "q-167",
+      "topic": "Agile/Adaptive",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (agile roles)",
+      "stem": "The product owner and a key stakeholder disagree on backlog priority. The agile team's PM/coach should:",
+      "options": [
+        "Set the priority themselves",
+        "Facilitate a conversation so the product owner makes the call with stakeholder input",
+        "Escalate to executives immediately",
+        "Let the loudest voice win"
+      ],
+      "answerIndex": 1,
+      "explanation": "Backlog priority is the product owner's accountability; the coach facilitates an informed decision, not decides it."
+    },
+    {
+      "id": "q-168",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (sustainable pace)",
+      "stem": "A team consistently works unsustainable overtime to hit dates. The people-focused leader should:",
+      "options": [
+        "Praise the heroics and expect more",
+        "Address sustainable pace by re-examining scope, capacity, and commitments with the team",
+        "Add more deadlines",
+        "Ignore it as long as work ships"
+      ],
+      "answerIndex": 1,
+      "explanation": "Protecting a sustainable pace — adjusting scope/capacity with the team — sustains long-term performance and wellbeing."
+    },
+    {
+      "id": "q-169",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (trust)",
+      "stem": "Which is the best way for a PM to build trust with a skeptical new team?",
+      "options": [
+        "Make big promises early",
+        "Be consistent, transparent, and follow through on commitments",
+        "Avoid admitting any uncertainty",
+        "Keep information tightly controlled"
+      ],
+      "answerIndex": 1,
+      "explanation": "Trust is earned through consistency, transparency, and reliably following through — not over-promising."
+    },
+    {
+      "id": "q-170",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (facilitation)",
+      "stem": "A team member dominates discussions, drowning out quieter members. The facilitating PM should:",
+      "options": [
+        "Let the strongest voice lead",
+        "Use facilitation techniques (round-robin, written input) to ensure balanced participation",
+        "Remove the quiet members",
+        "Cancel group discussions"
+      ],
+      "answerIndex": 1,
+      "explanation": "Good facilitation deliberately balances participation so all voices — and ideas — are heard."
+    },
+    {
+      "id": "q-171",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (recognition)",
+      "stem": "Recognizing and rewarding desired behavior is most effective when it is:",
+      "options": [
+        "Generic and given to everyone equally regardless of contribution",
+        "Specific, timely, and tied to the actual behavior or result",
+        "Always monetary",
+        "Delayed until the annual review"
+      ],
+      "answerIndex": 1,
+      "explanation": "Effective recognition is specific, timely, and clearly linked to the behavior you want to reinforce."
+    },
+    {
+      "id": "q-172",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (stakeholder engagement)",
+      "stem": "A stakeholder's engagement has slipped from Supportive to Neutral. The PM should FIRST:",
+      "options": [
+        "Remove them from the register",
+        "Investigate the cause and tailor engagement to re-earn their support",
+        "Escalate to the sponsor",
+        "Assume it is temporary and wait"
+      ],
+      "answerIndex": 1,
+      "explanation": "Monitor Stakeholder Engagement: identify the gap's cause and adapt the engagement approach to close it."
+    },
+    {
+      "id": "q-173",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "People domain / ECO-extended (leadership/communication)",
+      "stem": "The team disagrees with a decision the PM must ultimately own. After hearing them out, the PM decides differently. The best follow-through is to:",
+      "options": [
+        "Avoid explaining to prevent argument",
+        "Explain the reasoning transparently and acknowledge their input",
+        "Pretend the team's view prevailed",
+        "Implement silently"
+      ],
+      "answerIndex": 1,
+      "explanation": "Disagree-and-commit works when the leader transparently explains the rationale and genuinely acknowledges input."
     }
   ]
 }
