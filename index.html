@@ -93,6 +93,25 @@
   tr.crit td:first-child{font-weight:800;color:var(--bad)}
   .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.8rem}
   .pill.red{background:rgba(248,113,113,.18);color:var(--bad)} .pill.blue{background:rgba(79,156,255,.18);color:var(--accent)}
+  /* Exam navigator */
+  .exam-nav{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:5px}
+  .exam-nav button{aspect-ratio:1;border:1px solid var(--line);background:var(--panel2);color:var(--ink);
+    border-radius:7px;font-size:.72rem;cursor:pointer;padding:0}
+  .exam-nav button.ans{background:rgba(79,156,255,.25);border-color:var(--accent)}
+  .exam-nav button.flag{background:rgba(251,191,36,.28);border-color:var(--warn)}
+  .exam-nav button.cur{outline:2px solid var(--accent);outline-offset:1px;font-weight:800}
+  .navkey{display:inline-block;padding:1px 7px;border-radius:5px;margin-right:4px;border:1px solid var(--line)}
+  .navkey.ans{background:rgba(79,156,255,.25)} .navkey.flag{background:rgba(251,191,36,.28)} .navkey.cur{outline:2px solid var(--accent)}
+  .opt.sel{background:rgba(79,156,255,.2);border-color:var(--accent)}
+  #exClock.warn{background:rgba(248,113,113,.2);color:var(--bad)}
+  .gauge{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px;margin:6px 0}
+  .gauge .top{display:flex;justify-content:space-between;align-items:baseline;font-size:.85rem}
+  .gauge .rating{font-weight:800;font-size:.8rem;padding:2px 9px;border-radius:20px}
+  .rating.above{background:rgba(52,211,153,.18);color:var(--good)}
+  .rating.target{background:rgba(251,191,36,.18);color:var(--warn)}
+  .rating.below{background:rgba(248,113,113,.18);color:var(--bad)}
+  .gauge .track{height:12px;background:var(--bg);border-radius:8px;overflow:hidden;margin-top:6px}
+  .gauge .track>i{display:block;height:100%}
   .muted{color:var(--muted)} .center{text-align:center}
   .banner{background:rgba(251,191,36,.12);border:1px solid var(--warn);color:var(--ink);padding:9px 12px;
     border-radius:10px;font-size:.8rem;margin-bottom:12px}
@@ -108,6 +127,7 @@
 <nav role="tablist" aria-label="Study modes">
   <button role="tab" aria-selected="true" data-view="flash">Flashcards</button>
   <button role="tab" aria-selected="false" data-view="quiz">Quiz</button>
+  <button role="tab" aria-selected="false" data-view="exam">Exam Sim</button>
   <button role="tab" aria-selected="false" data-view="evm">EVM Calc</button>
   <button role="tab" aria-selected="false" data-view="sched">Scheduling</button>
   <button role="tab" aria-selected="false" data-view="dash">Dashboard</button>
@@ -226,6 +246,65 @@
       </div>
       <div id="qzReviewList"></div>
     </div>
+  </section>
+
+  <!-- ===== EXAM SIMULATOR ===== -->
+  <section id="exam" role="tabpanel" class="hidden">
+    <div class="panel" id="examSetup">
+      <h2 style="margin-top:0;font-size:1.05rem">Timed exam simulator</h2>
+      <p class="muted" style="font-size:.82rem">Exam-weighted (People&nbsp;42% / Process&nbsp;50% / Business&nbsp;8%), randomized, no feedback until you submit — like the real PMP. You'll get a domain-readiness report at the end.</p>
+      <div class="grid2">
+        <div>
+          <label for="exLen">Exam length</label>
+          <select id="exLen">
+            <option value="30">Quick — 30 questions</option>
+            <option value="60" selected>Standard — 60 questions</option>
+            <option value="90">Long — 90 questions</option>
+            <option value="0">Full bank — all available</option>
+          </select>
+        </div>
+        <div>
+          <label for="exTimed">Timing</label>
+          <select id="exTimed">
+            <option value="1" selected>Timed (1.3 min / question)</option>
+            <option value="0">Untimed practice</option>
+          </select>
+        </div>
+      </div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn" id="exStart">Start exam</button>
+        <span id="exInfo" class="muted" style="font-size:.8rem"></span>
+      </div>
+    </div>
+
+    <div id="examRun" class="hidden">
+      <div class="panel">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <span id="exClock" class="pill blue" aria-live="polite">--:--</span>
+          <span id="exPos" class="muted" style="font-size:.82rem"></span>
+        </div>
+        <div class="progress" style="margin-top:8px"><i id="exBar" style="width:0%"></i></div>
+        <div class="stem" id="exStem" style="margin-top:10px"></div>
+        <div id="exOpts"></div>
+        <div class="row" style="margin-top:12px;justify-content:space-between">
+          <button class="btn ghost" id="exPrev">&larr; Prev</button>
+          <button class="btn ghost" id="exFlag">⚑ Flag</button>
+          <button class="btn ghost" id="exNextBtn">Next &rarr;</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <strong style="font-size:.85rem">Navigator</strong>
+          <button class="btn" id="exSubmit">Submit exam</button>
+        </div>
+        <div id="exNav" class="exam-nav" style="margin-top:8px"></div>
+        <div class="muted" style="font-size:.72rem;margin-top:6px">
+          <span class="navkey ans">answered</span> <span class="navkey flag">flagged</span> <span class="navkey cur">current</span> <span class="navkey">unanswered</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="examReport" class="hidden"></div>
   </section>
 
   <!-- ===== EVM ===== -->
@@ -398,7 +477,7 @@ async function load(){
     b.classList.remove("hidden");
     b.textContent="⚠ Could not fetch content.json (opened via file://?). Running a tiny built-in fallback. For the full bank, serve the folder (see README) — e.g. 'python3 -m http.server'.";
   }
-  initTopics(); initFlash(); initQuizControls(); initEVM(); initSched(); refreshDash();
+  initTopics(); initFlash(); initQuizControls(); initEVM(); initSched(); initExam(); refreshDash();
 }
 
 /* ---------- helpers ---------- */
@@ -794,6 +873,168 @@ function initSched(){
   el('crashSolve').addEventListener('click',solveCrash);
   loadCpm(CPM_EXAMPLES[0].rows);
   crashRow('A',2,500,true);crashRow('B',3,300,true);crashRow('C',2,200,false);
+}
+
+/* ============ EXAM SIMULATOR ============ */
+const SECS_PER_Q=78; // 1.3 min/question (real PMP ≈ 230min/180Q)
+function ratingOf(p){return p>=75?['above','Above Target']:p>=60?['target','Target']:['below','Below Target'];}
+function sampleExam(n){
+  const all=DATA.questions;
+  if(!n||n>=all.length)return shuffle(all);
+  const w=(DATA.meta&&DATA.meta.ecoWeighting)||{People:.42,Process:.50,Business:.08};
+  const pools={};all.forEach(q=>{(pools[q.ecoDomain]||(pools[q.ecoDomain]=[])).push(q);});
+  Object.keys(pools).forEach(k=>pools[k]=shuffle(pools[k]));
+  const order=['People','Process','Business'];
+  const want={};order.forEach(k=>want[k]=Math.round((w[k]||0)*n));
+  want.Process+=n-order.reduce((s,k)=>s+want[k],0); // absorb rounding in largest bucket
+  let picked=[];order.forEach(k=>{picked=picked.concat((pools[k]||[]).slice(0,Math.max(0,want[k])));});
+  if(picked.length<n){const used=new Set(picked.map(q=>q.id));
+    picked=picked.concat(shuffle(all.filter(q=>!used.has(q.id))).slice(0,n-picked.length));}
+  return shuffle(picked.slice(0,n));
+}
+let examTimer=null;
+function updateExInfo(){
+  let n=parseInt(el('exLen').value,10); const avail=DATA.questions.length;
+  if(n===0||n>avail)n=avail;
+  const timed=el('exTimed').value==='1';
+  el('exInfo').textContent=`${n} questions${timed?` · ${Math.round(n*SECS_PER_Q/60)} min limit`:' · untimed'}`;
+}
+function startExam(){
+  let n=parseInt(el('exLen').value,10); if(n===0||n>DATA.questions.length)n=DATA.questions.length;
+  const items=sampleExam(n).map(q=>{const ord=shuffle(q.options.map((o,i)=>i));
+    return {q,order:ord,correctPos:ord.indexOf(q.answerIndex),chosen:null,flagged:false};});
+  const timed=el('exTimed').value==='1';
+  state.exam={items,cur:0,timed,endTime:timed?Date.now()+n*SECS_PER_Q*1000:null};
+  el('examSetup').classList.add('hidden');el('examReport').classList.add('hidden');
+  el('examRun').classList.remove('hidden');
+  buildExNav();renderExam();
+  if(examTimer)clearInterval(examTimer);
+  if(timed){tickClock();examTimer=setInterval(tickClock,1000);}else el('exClock').textContent='∞';
+}
+function tickClock(){
+  const ex=state.exam;if(!ex||!ex.timed)return;
+  let rem=Math.round((ex.endTime-Date.now())/1000);
+  if(rem<=0){rem=0;el('exClock').textContent='00:00';submitExam(true);return;}
+  const m=Math.floor(rem/60),s=rem%60;
+  el('exClock').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  el('exClock').classList.toggle('warn',rem<=300);
+}
+function renderExam(){
+  const ex=state.exam,it=ex.items[ex.cur],q=it.q;
+  el('exPos').textContent=`Question ${ex.cur+1} of ${ex.items.length}`;
+  el('exBar').style.width=((ex.cur+1)/ex.items.length*100)+'%';
+  el('exStem').textContent=q.stem;
+  const opts=el('exOpts');opts.innerHTML='';
+  it.order.forEach((origIdx,pos)=>{
+    const b=document.createElement('button');
+    b.className='opt'+(it.chosen===pos?' sel':'');
+    b.textContent=q.options[origIdx];
+    b.addEventListener('click',()=>{it.chosen=(it.chosen===pos?null:pos);renderExam();updateExNav();});
+    opts.appendChild(b);
+  });
+  el('exFlag').textContent=it.flagged?'⚑ Unflag':'⚑ Flag';
+  el('exFlag').classList.toggle('sel',it.flagged);
+  updateExNav();
+}
+function buildExNav(){
+  const nav=el('exNav');nav.innerHTML='';
+  state.exam.items.forEach((it,i)=>{
+    const b=document.createElement('button');b.textContent=i+1;
+    b.addEventListener('click',()=>{state.exam.cur=i;renderExam();});
+    nav.appendChild(b);
+  });
+  updateExNav();
+}
+function updateExNav(){
+  const ex=state.exam;
+  [...el('exNav').children].forEach((b,i)=>{
+    const it=ex.items[i];
+    b.className=(it.chosen!==null?'ans ':'')+(it.flagged?'flag ':'')+(i===ex.cur?'cur':'');
+  });
+}
+function submitExam(auto){
+  const ex=state.exam;
+  const unanswered=ex.items.filter(it=>it.chosen===null).length;
+  if(!auto&&unanswered>0&&!confirm(`${unanswered} question(s) unanswered. Submit anyway?`))return;
+  if(examTimer){clearInterval(examTimer);examTimer=null;}
+  // grade + feed dashboard
+  let right=0;const byDom={},byTopic={},byApproach={};
+  ex.items.forEach(it=>{
+    const q=it.q,ok=it.chosen===it.correctPos;if(ok)right++;
+    const bump=(o,k)=>{o[k]=o[k]||{right:0,wrong:0};ok?o[k].right++:o[k].wrong++;};
+    bump(byDom,q.ecoDomain);bump(byTopic,q.topic);bump(byApproach,q.approach);
+    // global session stats
+    const s=state.qStats[q.id]||(state.qStats[q.id]={right:0,wrong:0});ok?s.right++:s.wrong++;
+    const ts=state.topicStats[q.topic]||(state.topicStats[q.topic]={right:0,wrong:0});ok?ts.right++:ts.wrong++;
+  });
+  ex.result={right,total:ex.items.length,byDom,byTopic,byApproach,
+    timeUsed:ex.timed?Math.round((ex.items.length*SECS_PER_Q-(ex.endTime-Date.now())/1000)/60):null};
+  el('examRun').classList.add('hidden');el('examReport').classList.remove('hidden');
+  renderReport();refreshDash();
+}
+function gaugeRow(label,o){
+  const n=o.right+o.wrong;if(!n)return '';const p=Math.round(o.right/n*100);const[c,t]=ratingOf(p);
+  return `<div class="gauge"><div class="top"><strong>${label}</strong><span><span class="rating ${c}">${t}</span> &nbsp;${p}% (${o.right}/${n})</span></div>
+    <div class="track"><i style="width:${p}%;background:${c==='above'?'var(--good)':c==='target'?'var(--warn)':'var(--bad)'}"></i></div></div>`;
+}
+function renderReport(){
+  const ex=state.exam,r=ex.result,pct=Math.round(r.right/r.total*100);const[c,t]=ratingOf(pct);
+  const domOrder=['People','Process','Business'];
+  let html=`<div class="panel center">
+    <div class="big" style="font-size:2.2rem;font-weight:800">${pct}%</div>
+    <div class="rating ${c}" style="font-size:1rem;display:inline-block;margin:4px 0">${t}</div>
+    <p class="muted" style="font-size:.82rem;margin:6px 0">${r.right} of ${r.total} correct${r.timeUsed!=null?` · ${r.timeUsed} min used`:''}</p>
+    <p class="muted" style="font-size:.72rem">Heuristic bands: ≥75% Above Target · 60–74% Target · &lt;60% Below Target. PMI does not publish exact cut scores; treat as a study signal.</p>
+  </div>
+  <div class="panel"><h2 style="margin-top:0;font-size:1rem">Readiness by ECO domain</h2>
+    ${domOrder.map(d=>r.byDom[d]?gaugeRow(d+(d==='People'?' (42%)':d==='Process'?' (50%)':' (8%)'),r.byDom[d]):'').join('')}</div>
+  <div class="panel"><h2 style="margin-top:0;font-size:1rem">By approach</h2>
+    ${['Predictive','Agile/Hybrid','Both'].map(a=>r.byApproach[a]?gaugeRow(a,r.byApproach[a]):'').join('')}</div>
+  <div class="panel"><h2 style="margin-top:0;font-size:1rem">By topic</h2>
+    ${Object.keys(r.byTopic).sort().map(k=>gaugeRow(k,r.byTopic[k])).join('')}</div>
+  <div class="panel">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0;font-size:1rem">Review</h2>
+      <div class="row">
+        <button class="btn ghost" id="exRevWrong">Wrong only</button>
+        <button class="btn ghost" id="exRevAll">All</button>
+      </div>
+    </div>
+    <div id="exReviewList" style="margin-top:8px"></div>
+  </div>
+  <div class="panel center"><button class="btn" id="exAgain">New exam</button></div>`;
+  el('examReport').innerHTML=html;
+  el('exAgain').addEventListener('click',()=>{el('examReport').classList.add('hidden');el('examSetup').classList.remove('hidden');});
+  el('exRevWrong').addEventListener('click',()=>renderExReview(true));
+  el('exRevAll').addEventListener('click',()=>renderExReview(false));
+  renderExReview(true);
+  el('exam').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function renderExReview(wrongOnly){
+  const ex=state.exam,list=el('exReviewList');list.innerHTML='';
+  ex.items.forEach((it,n)=>{
+    const q=it.q,ok=it.chosen===it.correctPos;if(wrongOnly&&ok)return;
+    const your=it.chosen===null?'<em>(blank)</em>':q.options[it.order[it.chosen]];
+    list.insertAdjacentHTML('beforeend',
+      `<div class="feedback ${ok?'ok':'no'}" style="margin:8px 0;font-size:.86rem">
+        <div class="row" style="justify-content:space-between"><strong>Q${n+1}. ${ok?'✓':'✗'}</strong>
+          <span class="tag dom">${q.ecoDomain}</span></div>
+        <div style="margin:4px 0">${q.stem}</div>
+        ${ok?'':`<div>Your answer: ${your}</div>`}
+        <div>Correct: <strong>${q.options[q.answerIndex]}</strong></div>
+        <div class="muted" style="margin-top:4px">${q.explanation}</div>
+        <div class="src">Source: ${q.source}${q.ecoExtended?' · ECO-extended':''}</div></div>`);
+  });
+  if(!list.children.length)list.innerHTML='<p class="muted" style="font-size:.85rem">Nothing to show — no wrong answers!</p>';
+}
+function initExam(){
+  ['exLen','exTimed'].forEach(id=>el(id).addEventListener('change',updateExInfo));
+  el('exStart').addEventListener('click',startExam);
+  el('exPrev').addEventListener('click',()=>{if(state.exam.cur>0){state.exam.cur--;renderExam();}});
+  el('exNextBtn').addEventListener('click',()=>{if(state.exam.cur<state.exam.items.length-1){state.exam.cur++;renderExam();}});
+  el('exFlag').addEventListener('click',()=>{const it=state.exam.items[state.exam.cur];it.flagged=!it.flagged;renderExam();});
+  el('exSubmit').addEventListener('click',()=>submitExam(false));
+  updateExInfo();
 }
 
 load();
