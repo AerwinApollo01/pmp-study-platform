@@ -80,6 +80,19 @@
   .bar .track>i{display:block;height:100%;background:linear-gradient(90deg,var(--good),var(--accent))}
   .bar .pct{width:54px;text-align:right;flex:0 0 auto}
   .weak li{margin:4px 0;font-size:.85rem}
+  /* Scheduling */
+  .sched-tab{padding:8px 12px;font-size:.82rem;flex:1 1 auto;min-width:110px}
+  .sched-tab[aria-selected="true"]{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+  .sched-table{width:100%;border-collapse:collapse;font-size:.86rem;margin-top:4px}
+  .sched-table th{text-align:left;color:var(--muted);font-weight:600;font-size:.74rem;padding:6px 5px;border-bottom:1px solid var(--line)}
+  .sched-table td{padding:4px 5px;border-bottom:1px solid var(--line)}
+  .sched-table input{padding:6px 8px;font-size:.85rem}
+  .sched-table input.act{width:74px} .sched-table input.dur{width:64px} .sched-table input.pred{width:100%;min-width:90px}
+  .sched-table .del{background:none;border:none;color:var(--bad);cursor:pointer;font-size:1.1rem;padding:0 6px}
+  tr.crit{background:rgba(248,113,113,.14)}
+  tr.crit td:first-child{font-weight:800;color:var(--bad)}
+  .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.8rem}
+  .pill.red{background:rgba(248,113,113,.18);color:var(--bad)} .pill.blue{background:rgba(79,156,255,.18);color:var(--accent)}
   .muted{color:var(--muted)} .center{text-align:center}
   .banner{background:rgba(251,191,36,.12);border:1px solid var(--warn);color:var(--ink);padding:9px 12px;
     border-radius:10px;font-size:.8rem;margin-bottom:12px}
@@ -96,6 +109,7 @@
   <button role="tab" aria-selected="true" data-view="flash">Flashcards</button>
   <button role="tab" aria-selected="false" data-view="quiz">Quiz</button>
   <button role="tab" aria-selected="false" data-view="evm">EVM Calc</button>
+  <button role="tab" aria-selected="false" data-view="sched">Scheduling</button>
   <button role="tab" aria-selected="false" data-view="dash">Dashboard</button>
 </nav>
 <main>
@@ -231,6 +245,96 @@
     <div class="panel"><div class="res" id="evmOut"></div></div>
   </section>
 
+  <!-- ===== SCHEDULING LAB ===== -->
+  <section id="sched" role="tabpanel" class="hidden">
+    <div class="panel">
+      <div class="row" id="schedNav" role="tablist" aria-label="Scheduling methods">
+        <button class="btn sched-tab" data-stab="cpm" aria-selected="true">Critical Path (CPM)</button>
+        <button class="btn ghost sched-tab" data-stab="pert" aria-selected="false">Three-Point / PERT</button>
+        <button class="btn ghost sched-tab" data-stab="compress" aria-selected="false">Compression</button>
+        <button class="btn ghost sched-tab" data-stab="ref" aria-selected="false">Methods Reference</button>
+      </div>
+    </div>
+
+    <!-- CPM -->
+    <div id="stab-cpm" class="stab">
+      <div class="panel">
+        <p class="muted" style="font-size:.82rem;margin-top:0">Enter activities, durations, and predecessors. The lab runs the forward &amp; backward pass to compute ES/EF/LS/LF, total float, the critical path, and project duration. Predecessors = comma-separated activity names (blank = start).</p>
+        <div class="row" style="margin-bottom:8px">
+          <div style="flex:1;min-width:170px">
+            <label for="cpmExample">Load a practice network</label>
+            <select id="cpmExample">
+              <option value="">— choose —</option>
+              <option value="0">Example 1 — basic (6 activities)</option>
+              <option value="1">Example 2 — parallel paths (7 activities)</option>
+              <option value="2">Example 3 — near-critical trap (8 activities)</option>
+            </select>
+          </div>
+        </div>
+        <table class="sched-table" id="cpmTable">
+          <thead><tr><th>Activity</th><th>Duration</th><th>Predecessors</th><th></th></tr></thead>
+          <tbody id="cpmBody"></tbody>
+        </table>
+        <div class="row" style="margin-top:8px">
+          <button class="btn ghost" id="cpmAdd">+ Add activity</button>
+          <button class="btn" id="cpmSolve">Solve network</button>
+          <button class="btn ghost" id="cpmClear">Clear</button>
+        </div>
+        <div id="cpmError" class="muted" style="color:var(--bad);font-size:.82rem;margin-top:6px"></div>
+      </div>
+      <div class="panel hidden" id="cpmResultPanel">
+        <div class="row" style="justify-content:space-between;align-items:baseline">
+          <h2 style="margin:0;font-size:1rem">Results</h2>
+          <button class="btn ghost" id="cpmExplainBtn" style="padding:6px 10px;font-size:.8rem">How was this solved?</button>
+        </div>
+        <div id="cpmSummary" style="margin:8px 0"></div>
+        <table class="sched-table" id="cpmOut">
+          <thead><tr><th>Act</th><th>Dur</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Float</th></tr></thead>
+          <tbody id="cpmOutBody"></tbody>
+        </table>
+        <div id="cpmExplain" class="feedback hidden" style="margin-top:10px;font-size:.85rem"></div>
+      </div>
+    </div>
+
+    <!-- PERT -->
+    <div id="stab-pert" class="stab hidden">
+      <div class="panel">
+        <p class="muted" style="font-size:.82rem;margin-top:0">Three-point estimating smooths uncertainty. Beta (PERT) weights the most likely 4&times;; Triangular weights all three equally.</p>
+        <div class="grid2">
+          <div><label for="pO">Optimistic (O)</label><input type="number" id="pO" value="6"></div>
+          <div><label for="pM">Most Likely (M)</label><input type="number" id="pM" value="12"></div>
+          <div><label for="pP">Pessimistic (P)</label><input type="number" id="pP" value="30"></div>
+        </div>
+      </div>
+      <div class="panel"><div class="res" id="pertOut"></div></div>
+    </div>
+
+    <!-- COMPRESSION -->
+    <div id="stab-compress" class="stab hidden">
+      <div class="panel">
+        <p class="muted" style="font-size:.82rem;margin-top:0">Crashing buys time by adding cost. The cheapest way to shorten a project is to crash the activity on the <strong>critical path</strong> with the lowest cost-per-period. Enter options to find the best one.</p>
+        <table class="sched-table" id="crashTable">
+          <thead><tr><th>Activity</th><th>Max periods you can save</th><th>Cost per period ($)</th><th>On critical path?</th><th></th></tr></thead>
+          <tbody id="crashBody"></tbody>
+        </table>
+        <div class="row" style="margin-top:8px">
+          <button class="btn ghost" id="crashAdd">+ Add option</button>
+          <div style="flex:1;min-width:140px">
+            <label for="crashNeed">Periods to shorten</label>
+            <input type="number" id="crashNeed" value="2" min="1">
+          </div>
+          <button class="btn" id="crashSolve">Find cheapest crash</button>
+        </div>
+        <div id="crashOut" style="margin-top:10px"></div>
+      </div>
+    </div>
+
+    <!-- REFERENCE -->
+    <div id="stab-ref" class="stab hidden">
+      <div class="panel"><div class="res" id="refOut"></div></div>
+    </div>
+  </section>
+
   <!-- ===== DASHBOARD ===== -->
   <section id="dash" role="tabpanel" class="hidden">
     <div class="panel">
@@ -294,7 +398,7 @@ async function load(){
     b.classList.remove("hidden");
     b.textContent="⚠ Could not fetch content.json (opened via file://?). Running a tiny built-in fallback. For the full bank, serve the folder (see README) — e.g. 'python3 -m http.server'.";
   }
-  initTopics(); initFlash(); initQuizControls(); initEVM(); refreshDash();
+  initTopics(); initFlash(); initQuizControls(); initEVM(); initSched(); refreshDash();
 }
 
 /* ---------- helpers ---------- */
@@ -530,6 +634,167 @@ el('dReset').addEventListener('click',()=>{
   if(state.quiz)state.quiz=null;
   refreshDash();alert('Session reset.');
 });
+
+/* ============ SCHEDULING LAB ============ */
+const CPM_EXAMPLES=[
+  {name:"Basic", rows:[["A",2,""],["B",3,"A"],["C",2,"A"],["D",4,"B,C"],["E",2,"C"],["F",1,"D,E"]]},
+  {name:"Parallel", rows:[["Start",0,""],["A",4,"Start"],["B",6,"Start"],["C",3,"A"],["D",5,"B"],["E",2,"C,D"],["End",0,"E"]]},
+  {name:"Near-critical", rows:[["A",3,""],["B",4,"A"],["C",2,"A"],["D",5,"B"],["E",6,"C"],["F",2,"D"],["G",1,"E"],["H",3,"F,G"]]}
+];
+function schedTab(id){
+  document.querySelectorAll('.sched-tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.stab===id));
+  document.querySelectorAll('.sched-tab').forEach(b=>b.classList.toggle('ghost',b.dataset.stab!==id));
+  document.querySelectorAll('.stab').forEach(s=>s.classList.add('hidden'));
+  el('stab-'+id).classList.remove('hidden');
+  if(id==='pert')computePert(); if(id==='ref')renderRef();
+}
+function cpmRow(act='',dur='',pred=''){
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td><input class="act" value="${act}" placeholder="A"></td>
+    <td><input class="dur" type="number" min="0" value="${dur}" placeholder="0"></td>
+    <td><input class="pred" value="${pred}" placeholder="A, B"></td>
+    <td><button class="del" title="Remove" aria-label="Remove row">&times;</button></td>`;
+  tr.querySelector('.del').addEventListener('click',()=>tr.remove());
+  el('cpmBody').appendChild(tr);
+}
+function loadCpm(rows){el('cpmBody').innerHTML='';rows.forEach(r=>cpmRow(r[0],r[1],r[2]));}
+function readCpm(){
+  const rows=[];
+  el('cpmBody').querySelectorAll('tr').forEach(tr=>{
+    const act=tr.querySelector('.act').value.trim();
+    const dur=parseFloat(tr.querySelector('.dur').value);
+    const pred=tr.querySelector('.pred').value.split(/[, ]+/).map(x=>x.trim()).filter(Boolean);
+    if(act)rows.push({act,dur:isNaN(dur)?0:dur,pred});
+  });
+  return rows;
+}
+function solveCpm(){
+  el('cpmError').textContent='';
+  const rows=readCpm();
+  if(rows.length<2){el('cpmError').textContent='Add at least two activities.';return;}
+  const map={};rows.forEach(r=>map[r.act]=r);
+  // validate predecessors exist
+  for(const r of rows)for(const p of r.pred)if(!map[p]){el('cpmError').textContent=`Unknown predecessor "${p}" for activity ${r.act}.`;return;}
+  // topological order (Kahn). Detect cycles.
+  const indeg={},succ={};rows.forEach(r=>{indeg[r.act]=r.pred.length;succ[r.act]=[];});
+  rows.forEach(r=>r.pred.forEach(p=>succ[p].push(r.act)));
+  const q=rows.filter(r=>indeg[r.act]===0).map(r=>r.act),order=[];
+  while(q.length){const a=q.shift();order.push(a);succ[a].forEach(s=>{if(--indeg[s]===0)q.push(s);});}
+  if(order.length!==rows.length){el('cpmError').textContent='Cycle detected in dependencies — a network must be acyclic.';return;}
+  const ES={},EF={},LS={},LF={};
+  // forward
+  order.forEach(a=>{const r=map[a];ES[a]=r.pred.length?Math.max(...r.pred.map(p=>EF[p])):0;EF[a]=ES[a]+r.dur;});
+  const dur=Math.max(...rows.map(r=>EF[r.act]));
+  // backward
+  [...order].reverse().forEach(a=>{
+    LF[a]=succ[a].length?Math.min(...succ[a].map(s=>LS[s])):dur;
+    LS[a]=LF[a]-map[a].dur;
+  });
+  const res=rows.map(r=>({...r,ES:ES[r.act],EF:EF[r.act],LS:LS[r.act],LF:LF[r.act],float:LS[r.act]-ES[r.act]}));
+  // critical path = float 0, ordered
+  const crit=order.filter(a=>Math.abs(LS[a]-ES[a])<1e-9);
+  renderCpm(res,dur,crit,order);
+}
+function renderCpm(res,dur,crit,order){
+  el('cpmResultPanel').classList.remove('hidden');
+  el('cpmSummary').innerHTML=
+    `<span class="pill blue">Project duration: ${dur}</span> &nbsp; <span class="pill red">Critical path: ${crit.join(' → ')}</span>`;
+  const body=el('cpmOutBody');body.innerHTML='';
+  const byOrder={};order.forEach((a,i)=>byOrder[a]=i);
+  res.sort((a,b)=>byOrder[a.act]-byOrder[b.act]).forEach(r=>{
+    const tr=document.createElement('tr');
+    if(Math.abs(r.float)<1e-9)tr.className='crit';
+    tr.innerHTML=`<td>${r.act}</td><td>${r.dur}</td><td>${r.ES}</td><td>${r.EF}</td><td>${r.LS}</td><td>${r.LF}</td><td>${r.float}</td>`;
+    body.appendChild(tr);
+  });
+  el('cpmExplain').classList.add('hidden');
+  el('cpmExplain').innerHTML=
+    `<strong>Forward pass</strong> (left→right): ES = max(EF of predecessors), EF = ES + Duration. The largest EF (${dur}) is the project duration.<br>
+     <strong>Backward pass</strong> (right→left): for end activities LF = project duration; otherwise LF = min(LS of successors). LS = LF − Duration.<br>
+     <strong>Total float</strong> = LS − ES (= LF − EF). Activities with <strong>float = 0</strong> form the critical path — any slip there delays the whole project. Activities with float &gt; 0 can slip that many periods without affecting the end date.`;
+}
+function computePert(){
+  const O=+el('pO').value,M=+el('pM').value,P=+el('pP').value;
+  const beta=(O+4*M+P)/6, tri=(O+M+P)/3, sd=(P-O)/6, varr=sd*sd;
+  const rows=[
+    ['Beta / PERT estimate','tE = (O + 4M + P) ÷ 6',fmt(beta),'PMI default — weights the most likely value 4×.'],
+    ['Triangular estimate','tE = (O + M + P) ÷ 3',fmt(tri),'Simple average of the three points.'],
+    ['Standard deviation (σ)','σ = (P − O) ÷ 6',fmt(sd),'Spread of the estimate; larger = more uncertain.'],
+    ['Variance','σ²',fmt(varr),'Variances add along a path; σ of a path = √(Σ variances).'],
+    ['±1σ range (Beta)','tE ± σ',`${fmt(beta-sd)} to ${fmt(beta+sd)}`,'~68% confidence interval around the Beta estimate.'],
+    ['±2σ range (Beta)','tE ± 2σ',`${fmt(beta-2*sd)} to ${fmt(beta+2*sd)}`,'~95% confidence interval.']
+  ];
+  el('pertOut').innerHTML=rows.map(r=>
+    `<div class="resitem"><div class="name">${r[0]}</div><div class="f">${r[1]}</div><div class="val">${r[2]}</div><div class="interp muted">${r[3]}</div></div>`).join('');
+}
+function crashRow(act='',save='',cost='',crit=true){
+  const tr=document.createElement('tr');
+  tr.innerHTML=`<td><input class="act" value="${act}" placeholder="A"></td>
+    <td><input class="dur" type="number" min="0" value="${save}" placeholder="0"></td>
+    <td><input class="dur" type="number" min="0" value="${cost}" placeholder="0"></td>
+    <td style="text-align:center"><input type="checkbox" ${crit?'checked':''}></td>
+    <td><button class="del" aria-label="Remove">&times;</button></td>`;
+  tr.querySelector('.del').addEventListener('click',()=>tr.remove());
+  el('crashBody').appendChild(tr);
+}
+function solveCrash(){
+  const opts=[];
+  el('crashBody').querySelectorAll('tr').forEach(tr=>{
+    const i=tr.querySelectorAll('input');
+    const act=i[0].value.trim(),save=parseFloat(i[1].value)||0,cost=parseFloat(i[2].value)||0,crit=i[3].checked;
+    if(act&&save>0)opts.push({act,save,cost,crit});
+  });
+  let need=parseInt(el('crashNeed').value,10)||0;
+  // only critical-path activities shorten the project; pick lowest cost/period greedily
+  const usable=opts.filter(o=>o.crit).sort((a,b)=>a.cost-b.cost);
+  let total=0,plan=[],remaining=need;
+  for(const o of usable){
+    if(remaining<=0)break;
+    const take=Math.min(o.save,remaining);
+    plan.push(`Crash <strong>${o.act}</strong> by ${take} period(s) @ $${o.cost}/period = $${take*o.cost}`);
+    total+=take*o.cost;remaining-=take;
+  }
+  const nonCrit=opts.filter(o=>!o.crit).map(o=>o.act);
+  let html=`<div class="feedback ${remaining>0?'no':'ok'}">`;
+  if(!usable.length){html+='No critical-path options entered — crashing a non-critical activity will <strong>not</strong> shorten the project.';}
+  else{
+    html+=`<strong>Cheapest way to save ${need-remaining} of ${need} period(s): $${total}</strong><ul style="margin:6px 0">`+
+      plan.map(p=>`<li>${p}</li>`).join('')+'</ul>';
+    if(remaining>0)html+=`<div style="color:var(--bad)">Only ${need-remaining} period(s) achievable from the critical-path options given.</div>`;
+  }
+  if(nonCrit.length)html+=`<div class="muted" style="margin-top:6px">Ignored (not on critical path, so no schedule effect): ${nonCrit.join(', ')}.</div>`;
+  html+='<div class="muted" style="margin-top:6px">Rule: shorten the project by crashing the <em>critical</em> activity with the lowest cost per period first. Watch for the path becoming non-critical as you compress.</div></div>';
+  el('crashOut').innerHTML=html;
+}
+function renderRef(){
+  const r=[
+    ['PDM — 4 relationships','Finish-to-Start (FS, most common), Start-to-Start (SS), Finish-to-Finish (FF), Start-to-Finish (SF, rare).','Study Guide §3.3'],
+    ['Leads vs. Lags','Lead = overlap letting a successor start early (acceleration). Lag = an imposed delay between activities.','Study Guide §3.3'],
+    ['Crashing','Add resources to shorten duration → increases COST. Crash the cheapest critical activity first.','Study Guide §3.3'],
+    ['Fast Tracking','Run sequential activities in parallel → increases RISK / rework. No added cost.','Study Guide §3.3'],
+    ['Resource Leveling','Adjust schedule to resource limits; CAN change the critical path and end date.','Study Guide §3.3'],
+    ['Resource Smoothing','Optimize within available float; does NOT change the end date.','Study Guide §3.3'],
+    ['Critical Path Method','Longest path through the network = shortest possible duration. Critical activities have zero float.','Study Guide §3.3'],
+    ['Rolling Wave Planning','Progressive elaboration: detail near-term work, leave later work high-level.','Study Guide §3.3'],
+    ['Three-Point / PERT','tE = (O+4M+P)/6 (Beta) or (O+M+P)/3 (Triangular). σ = (P−O)/6.','Study Guide §3.4'],
+    ['Adaptive scheduling','Timeboxed iterations + roadmap; track with burndown/burnup charts instead of Gantt.','Study Guide §3.3 Tailoring']
+  ];
+  el('refOut').innerHTML=r.map(x=>
+    `<div class="resitem"><div class="name">${x[0]}</div><div class="interp" style="margin-top:3px">${x[1]}</div><div class="src">Source: ${x[2]}</div></div>`).join('');
+}
+function initSched(){
+  document.querySelectorAll('.sched-tab').forEach(b=>b.addEventListener('click',()=>schedTab(b.dataset.stab)));
+  el('cpmAdd').addEventListener('click',()=>cpmRow());
+  el('cpmSolve').addEventListener('click',solveCpm);
+  el('cpmClear').addEventListener('click',()=>{el('cpmBody').innerHTML='';el('cpmResultPanel').classList.add('hidden');cpmRow();});
+  el('cpmExample').addEventListener('change',e=>{const i=e.target.value;if(i!=='')loadCpm(CPM_EXAMPLES[+i].rows);});
+  el('cpmExplainBtn').addEventListener('click',()=>el('cpmExplain').classList.toggle('hidden'));
+  ['pO','pM','pP'].forEach(id=>el(id).addEventListener('input',computePert));
+  el('crashAdd').addEventListener('click',()=>crashRow());
+  el('crashSolve').addEventListener('click',solveCrash);
+  loadCpm(CPM_EXAMPLES[0].rows);
+  crashRow('A',2,500,true);crashRow('B',3,300,true);crashRow('C',2,200,false);
+}
 
 load();
 </script>
