@@ -1,19 +1,34 @@
 # PMP Exam Prep — PMBOK® Guide 8th Edition
 
-A self-contained, single-file study app: flashcards, a quiz engine, an EVM calculator,
-spaced repetition, and a progress dashboard. No build step, no external CDNs, no data
-ever leaves your machine.
+A self-contained study app: flashcards, a quiz engine, an EVM calculator, an interactive
+scheduling lab, spaced repetition, and a progress dashboard. No build step, no external CDNs,
+no data ever leaves the browser.
+
+## ▶️ Live app (no install)
+
+**https://aerwinapollo01.github.io/pmp-study-platform/**
+
+Open it on any device — phone, tablet, or desktop. Hosted on GitHub Pages and rebuilt
+automatically on every push to `main`.
+
+## What's inside
+- **173 quiz questions**, weighted to the PMP exam (**People 42% / Process 45% / Business 13%**)
+- **100 flashcards** (terms, processes, formulas)
+- **14 formulas** (EVM, PERT, EMV)
 
 ## Files
 | File | Purpose |
 |------|---------|
-| `index.html` | The whole app (HTML + CSS + vanilla JS). |
+| `index.html` | The whole app — HTML + CSS + vanilla JS, including the Scheduling Lab logic. |
 | `content.json` | All flashcards, questions, and formulas. **Edit this to change content — no code changes needed.** |
 | `README.md` | This file. |
 
 ## How to run
 
-### Recommended — run a tiny local server (loads the full bank)
+### Easiest — just open the live URL above
+Nothing to install.
+
+### Locally — run a tiny static server (loads the full bank)
 Browsers block `fetch()` of local files over `file://`, so to load `content.json` serve the folder:
 
 ```bash
@@ -22,12 +37,12 @@ python3 -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
 
-(Any static server works — e.g. `npx serve`.)
+(Any static server works — e.g. `npx serve`.) Use the local server when you're editing
+`content.json` and want changes instantly, without waiting for the Pages rebuild.
 
 ### Quick — double-click `index.html`
-It will open and run, but because `fetch()` is blocked on `file://` it falls back to a tiny
-built-in question set so the app still works. **Use the local-server method above to study the
-full 135-question / 100-flashcard bank.**
+It opens and runs, but because `fetch()` is blocked on `file://` it falls back to a tiny
+built-in question set. **Use the live URL or a local server for the full bank.**
 
 ## Features
 1. **Flashcards** — flip cards for terms, processes, and formulas. Filter by topic and type;
@@ -40,9 +55,18 @@ full 135-question / 100-flashcard bank.**
 4. **EVM calculator** — enter PV, EV, AC, BAC → SV, CV, SPI, CPI, all four EAC variants, ETC,
    VAC, and TCPI (to BAC and to EAC), each with its formula and a plain-English interpretation.
    A checkbox switches the "selected EAC" between the CPI and atypical variants.
-5. **Spaced repetition** — right/wrong is tracked per item for the session; missed items can be
+5. **Scheduling Lab** — interactive practice for the scheduling methods (logic lives in
+   `index.html`, not `content.json`):
+   - **Critical Path (CPM)** — enter activities/durations/predecessors; runs the forward &
+     backward pass to compute ES/EF/LS/LF, total float, the critical path, and project
+     duration. Includes 3 practice networks and a step-by-step explanation.
+   - **Three-Point / PERT** — Beta and Triangular estimates, σ, variance, and ±1σ/±2σ ranges.
+   - **Compression** — finds the cheapest critical-path crash to shorten N periods.
+   - **Methods Reference** — PDM relationships, leads/lags, crashing vs. fast-tracking,
+     leveling vs. smoothing, rolling wave, and adaptive scheduling (all source-cited).
+6. **Spaced repetition** — right/wrong is tracked per item for the session; missed items can be
    resurfaced first in both quiz and flashcards.
-6. **Dashboard** — session score, % correct by topic, items reviewed, and a ranked weak-areas list.
+7. **Dashboard** — session score, % correct by topic, items reviewed, and a ranked weak-areas list.
 
 > Session data is held **in memory only** — refreshing the page starts a clean session.
 > (No `localStorage`/`sessionStorage`, by design.)
@@ -75,17 +99,23 @@ Append an object to the `questions` array. Rules the app and the validator expec
   PMBOK 8 (e.g., agile/People/Business exam content) so it's visibly flagged in the UI.
 - Give each item a unique `id`.
 
+After editing, commit and push — the live site rebuilds automatically (allow ~1 minute).
+
 ### Adding a flashcard
 Append to `flashcards` with a `type` of `term`, `process`, or `formula`. New `topic` values
 appear automatically in the filter dropdowns.
+
+> The **Scheduling Lab** is interactive logic, not data, so it lives in `index.html` and is
+> not editable via `content.json`.
 
 ## Sources & accuracy
 - Primary source: **`PMBOK_8th_Edition_Breakdown.md`** (your verified study guide) plus the
   official **PMBOK® Guide 8th Edition** PDF for verification.
 - Every flashcard and question carries a `source` field.
-- EVM formula identities use the standard PMI Earned Value convention; the SV/CV/SPI/CPI/TCPI
-  definitions trace to the study guide and glossary.
-- `ecoExtended: true` marks content that goes beyond the book (not directly book-citable).
+- EVM and CPM math are independently verified (worked test cases match standard PMI values).
+- `ecoExtended: true` marks content that goes beyond the book — correct PMP/ECO exam knowledge
+  that isn't directly quotable from PMBOK 8 (e.g., Tuckman stages, conflict modes, the
+  channels formula). The UI badges these so you know they aren't book-citable.
 
 ## Validating content
 A quick integrity check (Node.js):
@@ -96,7 +126,8 @@ node -e 'const d=require("./content.json");
  d.questions.forEach(q=>{if(ids.has(q.id))e++;ids.add(q.id);
    if(q.options.length!==4)e++; if(q.answerIndex<0||q.answerIndex>3)e++;
    if(!q.source||!q.explanation)e++;});
- console.log("Q:",d.questions.length,"FC:",d.flashcards.length,e?("ERRORS "+e):"OK");'
+ const dist={};d.questions.forEach(q=>dist[q.ecoDomain]=(dist[q.ecoDomain]||0)+1);
+ console.log("Q:",d.questions.length,"FC:",d.flashcards.length,"ECO:",dist,e?("ERRORS "+e):"OK");'
 ```
 
 PMBOK® is a registered mark of the Project Management Institute, Inc.
