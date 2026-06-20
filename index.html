@@ -89,6 +89,17 @@
   .sched-table input{padding:6px 8px;font-size:.85rem}
   .sched-table input.act{width:74px} .sched-table input.dur{width:64px} .sched-table input.pred{width:100%;min-width:90px}
   .sched-table .del{background:none;border:none;color:var(--bad);cursor:pointer;font-size:1.1rem;padding:0 6px}
+  #cpmDiagramWrap{overflow-x:auto;margin:8px 0;padding-bottom:4px}
+  #cpmDiagram{display:block}
+  #cpmDiagram .nbox{fill:var(--panel2);stroke:var(--line);stroke-width:1.5}
+  #cpmDiagram .node.crit .nbox{fill:rgba(248,113,113,.14);stroke:var(--bad);stroke-width:2}
+  #cpmDiagram .div{stroke:var(--line);stroke-width:1}
+  #cpmDiagram .cell{fill:var(--ink);font-size:11px;text-anchor:middle;font-family:ui-monospace,Menlo,monospace}
+  #cpmDiagram .nm{fill:var(--ink);font-size:13px;font-weight:800;text-anchor:middle}
+  #cpmDiagram .node.crit .nm{fill:var(--bad)}
+  #cpmDiagram .edge{stroke:var(--muted);stroke-width:1.6;fill:none}
+  #cpmDiagram .edge.crit{stroke:var(--bad);stroke-width:2.6}
+  .cpm-legend{font-size:.72rem;line-height:1.5}
   tr.crit{background:rgba(248,113,113,.14)}
   tr.crit td:first-child{font-weight:800;color:var(--bad)}
   .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-weight:700;font-size:.8rem}
@@ -367,10 +378,20 @@
           <button class="btn ghost" id="cpmExplainBtn" style="padding:6px 10px;font-size:.8rem">How was this solved?</button>
         </div>
         <div id="cpmSummary" style="margin:8px 0"></div>
-        <table class="sched-table" id="cpmOut">
-          <thead><tr><th>Act</th><th>Dur</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Float</th></tr></thead>
-          <tbody id="cpmOutBody"></tbody>
-        </table>
+        <div id="cpmDiagramWrap"><svg id="cpmDiagram" xmlns="http://www.w3.org/2000/svg"></svg></div>
+        <div class="cpm-legend muted">
+          Each node: <b>ES&nbsp;·&nbsp;Dur&nbsp;·&nbsp;EF</b> (top), <b>Activity</b> (middle),
+          <b>LS&nbsp;·&nbsp;Float&nbsp;·&nbsp;LF</b> (bottom). <span style="color:var(--bad)">Red</span> = critical (float&nbsp;0).
+        </div>
+        <div class="row" style="margin-top:8px">
+          <button class="btn ghost" id="cpmTableToggle" style="padding:6px 10px;font-size:.8rem">Show details table</button>
+        </div>
+        <div id="cpmTableWrap" class="hidden" style="margin-top:8px">
+          <table class="sched-table" id="cpmOut">
+            <thead><tr><th>Act</th><th>Dur</th><th>ES</th><th>EF</th><th>LS</th><th>LF</th><th>Float</th></tr></thead>
+            <tbody id="cpmOutBody"></tbody>
+          </table>
+        </div>
         <div id="cpmExplain" class="feedback hidden" style="margin-top:10px;font-size:.85rem"></div>
       </div>
     </div>
@@ -786,11 +807,74 @@ function renderCpm(res,dur,crit,order){
     tr.innerHTML=`<td>${r.act}</td><td>${r.dur}</td><td>${r.ES}</td><td>${r.EF}</td><td>${r.LS}</td><td>${r.LF}</td><td>${r.float}</td>`;
     body.appendChild(tr);
   });
+  renderCpmDiagram(res,dur,order);
   el('cpmExplain').classList.add('hidden');
   el('cpmExplain').innerHTML=
     `<strong>Forward pass</strong> (left→right): ES = max(EF of predecessors), EF = ES + Duration. The largest EF (${dur}) is the project duration.<br>
      <strong>Backward pass</strong> (right→left): for end activities LF = project duration; otherwise LF = min(LS of successors). LS = LF − Duration.<br>
      <strong>Total float</strong> = LS − ES (= LF − EF). Activities with <strong>float = 0</strong> form the critical path — any slip there delays the whole project. Activities with float &gt; 0 can slip that many periods without affecting the end date.`;
+}
+function renderCpmDiagram(res,dur,order){
+  const map={};res.forEach(r=>map[r.act]=r);
+  const isCrit=r=>Math.abs(r.float)<1e-9;
+  // topological rank = column (longest predecessor chain)
+  const rank={};order.forEach(a=>{const r=map[a];rank[a]=r.pred.length?Math.max(...r.pred.map(p=>rank[p]))+1:0;});
+  const cols={};order.forEach(a=>{(cols[rank[a]]||(cols[rank[a]]=[])).push(a);});
+  const W=124,H=66,GX=66,GY=24,PAD=14;
+  const maxRank=Math.max(...Object.keys(cols).map(Number));
+  const maxRows=Math.max(...Object.values(cols).map(c=>c.length));
+  const pos={};
+  for(let r=0;r<=maxRank;r++){
+    const list=cols[r]||[];
+    // vertically center each column
+    const colH=list.length*H+(list.length-1)*GY;
+    const totalH=maxRows*H+(maxRows-1)*GY;
+    const y0=PAD+(totalH-colH)/2;
+    list.forEach((a,i)=>pos[a]={x:PAD+r*(W+GX),y:y0+i*(H+GY)});
+  }
+  const svgW=PAD*2+(maxRank+1)*W+maxRank*GX;
+  const svgH=PAD*2+maxRows*H+(maxRows-1)*GY;
+  const f=v=>fmt(v);
+  let edges='',nodes='';
+  res.forEach(r=>{
+    const a=r.act,P=pos[a];
+    // edges from each predecessor
+    r.pred.forEach(p=>{
+      const pp=pos[p],pr=map[p];
+      const x1=pp.x+W,y1=pp.y+H/2,x2=P.x,y2=P.y+H/2;
+      const crit=isCrit(pr)&&isCrit(r)&&Math.abs(pr.EF-r.ES)<1e-9;
+      edges+=`<path class="edge${crit?' crit':''}" d="M${x1} ${y1} C ${x1+GX*0.5} ${y1}, ${x2-GX*0.5} ${y2}, ${x2-7} ${y2}" marker-end="url(#${crit?'arrC':'arr'})"/>`;
+    });
+  });
+  res.forEach(r=>{
+    const a=r.act,P=pos[a],c=isCrit(r)?' crit':'';
+    const cx=[W*0.205,W*0.5,W*0.795];
+    nodes+=`<g class="node${c}" transform="translate(${P.x},${P.y})">
+      <rect class="nbox" width="${W}" height="${H}" rx="8"/>
+      <line class="div" x1="0" y1="20" x2="${W}" y2="20"/>
+      <line class="div" x1="0" y1="44" x2="${W}" y2="44"/>
+      <line class="div" x1="${W/3}" y1="0" x2="${W/3}" y2="20"/>
+      <line class="div" x1="${2*W/3}" y1="0" x2="${2*W/3}" y2="20"/>
+      <line class="div" x1="${W/3}" y1="44" x2="${W/3}" y2="${H}"/>
+      <line class="div" x1="${2*W/3}" y1="44" x2="${2*W/3}" y2="${H}"/>
+      <text class="cell" x="${cx[0]}" y="14">${f(r.ES)}</text>
+      <text class="cell" x="${cx[1]}" y="14">${f(r.dur)}</text>
+      <text class="cell" x="${cx[2]}" y="14">${f(r.EF)}</text>
+      <text class="nm" x="${W/2}" y="37">${a}</text>
+      <text class="cell" x="${cx[0]}" y="59">${f(r.LS)}</text>
+      <text class="cell" x="${cx[1]}" y="59">${f(r.float)}</text>
+      <text class="cell" x="${cx[2]}" y="59">${f(r.LF)}</text>
+    </g>`;
+  });
+  const defs=`<defs>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="var(--muted)"/></marker>
+    <marker id="arrC" markerWidth="11" markerHeight="11" refX="7" refY="3.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="var(--bad)"/></marker></defs>`;
+  const svg=el('cpmDiagram');
+  svg.setAttribute('viewBox',`0 0 ${svgW} ${svgH}`);
+  svg.setAttribute('width',svgW);svg.setAttribute('height',svgH);
+  svg.innerHTML=defs+edges+nodes;
 }
 function computePert(){
   const O=+el('pO').value,M=+el('pM').value,P=+el('pP').value;
@@ -868,6 +952,10 @@ function initSched(){
   el('cpmClear').addEventListener('click',()=>{el('cpmBody').innerHTML='';el('cpmResultPanel').classList.add('hidden');cpmRow();});
   el('cpmExample').addEventListener('change',e=>{const i=e.target.value;if(i!=='')loadCpm(CPM_EXAMPLES[+i].rows);});
   el('cpmExplainBtn').addEventListener('click',()=>el('cpmExplain').classList.toggle('hidden'));
+  el('cpmTableToggle').addEventListener('click',()=>{
+    const w=el('cpmTableWrap'),hidden=w.classList.toggle('hidden');
+    el('cpmTableToggle').textContent=hidden?'Show details table':'Hide details table';
+  });
   ['pO','pM','pP'].forEach(id=>el(id).addEventListener('input',computePert));
   el('crashAdd').addEventListener('click',()=>crashRow());
   el('crashSolve').addEventListener('click',solveCrash);
