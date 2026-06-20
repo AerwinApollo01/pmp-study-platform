@@ -1,5 +1,9 @@
 # Matching Lab & Behavioral Analytics — Deep Focus module
 
+> 🧪 **Experimental.** This module is a sandbox, decoupled from the main study app
+> (`../index.html`). Its content, behavior, and API may change, and it is not wired into the
+> main app's navigation. The core platform remains the stable, primary product.
+
 A self-contained module for the PMP Study Platform: a **drag-and-drop matching lab** plus a
 **behavioral analytics engine** that surfaces two high-yield, stress-bound study metrics. Built
 with semantic HTML5, vanilla web APIs, and modular TypeScript — no UI frameworks, no mapping

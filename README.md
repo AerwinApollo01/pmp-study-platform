@@ -35,7 +35,22 @@ automatically on every push to `main`.
 |------|---------|
 | `index.html` | The whole app — HTML + CSS + vanilla JS, including the Scheduling Lab logic. |
 | `content.json` | All flashcards, questions, and formulas. **Edit this to change content — no code changes needed.** |
+| `matching-lab/` | 🧪 **Experimental** standalone module (see below). Not part of the main app. |
 | `README.md` | This file. |
+
+## 🧪 Matching Lab (experimental)
+
+`matching-lab/` is a **separate, experimental** module — a drag-and-drop matching exercise plus
+a behavioral analytics engine (NOT-logic error rate and an escalation-index judgment metric),
+built in modular TypeScript with the "Deep Focus" design system. It is intentionally **decoupled**
+from the main study app: different toolchain (TypeScript build), different palette, and its own
+deploy path. It is **not wired into the main app's tabs** and its behavior/API may change.
+
+- Live: **https://aerwinapollo01.github.io/pmp-study-platform/matching-lab/**
+- Details: [`matching-lab/README.md`](matching-lab/README.md)
+
+> Status: experimental. The core study platform (`index.html` + `content.json`) is the stable,
+> primary product; the Matching Lab is a sandbox for new interaction patterns.
 
 ## How to run
 
