@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PMP Matching Lab — Deep Focus</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Matching Lab &amp; Behavioral Analytics</h1>
+    <p>Drag-and-drop matching with stress-bound habit tracking — Deep Focus palette.</p>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT RAIL: Behavioral Analytics Engine output -->
+    <aside aria-label="Behavioral analytics">
+      <section class="card metric" id="card-not">
+        <h2 class="card__title">"NOT" Logic Error Rate</h2>
+        <p class="card__sub">Misses on inverted-logic situational questions.</p>
+        <div class="metric__value" id="not-rate">—</div>
+        <div class="metric__detail" id="not-detail">No NOT-logic questions answered yet</div>
+      </section>
+
+      <section class="card metric" id="card-esc">
+        <h2 class="card__title">Escalation Index</h2>
+        <p class="card__sub">How often you defer authority to third parties.</p>
+        <div class="metric__value" id="esc-index">—</div>
+        <div class="metric__detail" id="esc-detail">No situational answers yet</div>
+        <div class="metric__flag" id="esc-flag" hidden>
+          ⚠ Above 20% — recurring authority deferral suggests a situational-judgment gap.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card__title">Situational drill</h2>
+        <p class="card__sub">Answer these — they feed the two metrics above in real time.</p>
+        <div class="drill" id="drill"></div>
+        <button class="btn btn--ghost" id="metrics-reset" style="margin-top:12px">Reset analytics</button>
+      </section>
+    </aside>
+
+    <!-- RIGHT: Matching Lab -->
+    <section class="card">
+      <div class="lab-head">
+        <div>
+          <h2 class="card__title" id="set-title">Matching set</h2>
+          <p class="card__sub" id="set-prompt"></p>
+        </div>
+        <div class="lab-toolbar">
+          <span class="lab-score" id="lab-score"></span>
+          <button class="btn btn--ghost" id="lab-reset">Reset</button>
+          <button class="btn" id="set-switch">Next set →</button>
+        </div>
+      </div>
+
+      <div class="lab-grid">
+        <div>
+          <div class="bank-label">Bank — drag from here</div>
+          <div class="bank" id="bank" aria-label="Draggable bank"></div>
+        </div>
+        <div>
+          <div class="bank-label">Drop targets</div>
+          <div class="targets" id="targets"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Compiled bundle (tsc output). Runs by double-click — no build needed to use. -->
+  <script src="dist/app.js"></script>
+</body>
+</html>
