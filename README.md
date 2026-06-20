@@ -12,9 +12,11 @@ Open it on any device — phone, tablet, or desktop. Hosted on GitHub Pages and 
 automatically on every push to `main`.
 
 ## What's inside
-- **283 quiz questions** — 173 authored from the verified study guide plus 110 situational
+- **319 quiz questions** — 173 authored from the verified study guide, 110 situational
   questions imported from a PMBOK 8 Q&A video (each tagged in its `source` as
-  `via Q&A video … not independently verified`, so you always know the trust level)
+  `via Q&A video … not independently verified`), and 36 Business Environment questions
+  mapped to the 2026 ECO tasks (governance, compliance, change control, impediments/issues,
+  risk, continuous improvement, sustainability)
 - **100 flashcards** (terms, processes, formulas)
 - **14 formulas** (EVM, PERT, EMV)
 
@@ -22,12 +24,11 @@ automatically on every push to `main`.
 > Business Environment 26%**, with ~40% predictive and ~60% adaptive-agile/hybrid. The
 > Exam Sim samples to these weightings automatically.
 >
-> Note on content depth: the question bank currently skews lighter on **Business
-> Environment** (~15% of items) than the 26% the 2026 exam demands (governance, compliance,
-> change control, risk, continuous improvement). The Exam Sim still samples Business
-> Environment to 26% (backfilling as needed), but adding more Business Environment items is
-> the recommended next content step. To target the older 2021 ECO instead (42/50/8), edit
-> `meta.ecoWeighting` in `content.json`.
+> Content depth now matches the 2026 ECO much more closely: **Business Environment ~24%**
+> of the bank (up from ~15%), covering governance, compliance, change control,
+> impediments/issues, risk, continuous improvement, and sustainability — sourced to the
+> 2026 ECO tasks. To target the older 2021 ECO instead (42/50/8), edit `meta.ecoWeighting`
+> in `content.json`.
 
 ## Files
 | File | Purpose |

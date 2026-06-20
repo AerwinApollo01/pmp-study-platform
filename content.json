@@ -6352,6 +6352,654 @@
       ],
       "answerIndex": 2,
       "explanation": "When selecting by a financial prioritization metric (ROI/NPV/IRR), choose the option with the highest value — here C at 135%."
+    },
+    {
+      "id": "q-401",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 1 (Define/establish governance)",
+      "stem": "A new program needs a clear framework for decisions, reporting, and escalation. As PM you draw on organizational process assets to define the structure, rules, ethics, and policies. What are you establishing?",
+      "options": [
+        "The risk management plan",
+        "Project governance",
+        "The communications plan",
+        "The procurement strategy"
+      ],
+      "answerIndex": 1,
+      "explanation": "Defining the structure, rules, procedures, reporting, ethics, and policies (often via OPAs) is establishing project governance."
+    },
+    {
+      "id": "q-402",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 1",
+      "stem": "Leadership asks how the team will know early when the project drifts outside acceptable limits so the right people are notified. What governance element addresses this?",
+      "options": [
+        "Success metrics only",
+        "Escalation paths and thresholds",
+        "A bidder conference",
+        "A burndown chart"
+      ],
+      "answerIndex": 1,
+      "explanation": "Governance defines escalation paths and thresholds so deviations beyond a limit are routed to the right authority."
+    },
+    {
+      "id": "q-403",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 1",
+      "stem": "Before execution, the steering committee wants agreement on how project success will be judged. What should the PM define as part of governance?",
+      "options": [
+        "Success metrics aligned to objectives",
+        "The WBS dictionary",
+        "The resource calendar",
+        "Velocity targets"
+      ],
+      "answerIndex": 0,
+      "explanation": "Defining success metrics (aligned to strategic objectives) is a core governance activity."
+    },
+    {
+      "id": "q-404",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 1; PMBOK8 'steering committee'",
+      "stem": "A large regulated project needs senior oversight for decisions outside the team's authority. Which body provides this direction and support?",
+      "options": [
+        "The product owner",
+        "A steering committee",
+        "The scrum team",
+        "The change author"
+      ],
+      "answerIndex": 1,
+      "explanation": "A steering committee of senior stakeholders provides direction and decisions beyond the team's authority — a governance structure."
+    },
+    {
+      "id": "q-405",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 1",
+      "stem": "An executive wants assurance the project is being run ethically and consistently with company policy. Which assets primarily encode these rules for the team?",
+      "options": [
+        "Enterprise environmental factors",
+        "Organizational process assets (OPAs)",
+        "The risk register",
+        "The stakeholder register"
+      ],
+      "answerIndex": 1,
+      "explanation": "OPAs (policies, procedures, standards, ethics guidance) are used to establish governance structure and rules."
+    },
+    {
+      "id": "q-406",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2 (Plan/manage compliance)",
+      "stem": "Starting a medical-device project, the PM must confirm which security, health-and-safety, sustainability, and regulatory rules apply. What is the PM doing?",
+      "options": [
+        "Confirming project compliance requirements",
+        "Estimating costs",
+        "Defining the schedule baseline",
+        "Running a retrospective"
+      ],
+      "answerIndex": 0,
+      "explanation": "Identifying which security, H&S, sustainability, and regulatory requirements apply is confirming compliance requirements."
+    },
+    {
+      "id": "q-407",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "The team lists dozens of obligations spanning data privacy, worker safety, and environmental rules. To manage them, the PM groups them by type. What is this step?",
+      "options": [
+        "Classifying compliance categories",
+        "Quantitative risk analysis",
+        "Scope decomposition",
+        "Procurement bidding"
+      ],
+      "answerIndex": 0,
+      "explanation": "Grouping obligations by type (security, safety, environmental, regulatory) is classifying compliance categories."
+    },
+    {
+      "id": "q-408",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "The PM evaluates what would happen if a key regulatory requirement is not met — fines, shutdown, reputational harm. What compliance activity is this?",
+      "options": [
+        "Analyzing the consequences of noncompliance",
+        "Reserve analysis",
+        "Resource leveling",
+        "Stakeholder mapping"
+      ],
+      "answerIndex": 0,
+      "explanation": "Assessing fines, stoppages, or reputational harm is analyzing the consequences of noncompliance."
+    },
+    {
+      "id": "q-409",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "A compliance officer asks how the PM will know the project is actually meeting its regulatory obligations over time. What should the PM put in place?",
+      "options": [
+        "A way to measure the extent of compliance",
+        "A larger contingency reserve",
+        "A fast-tracking plan",
+        "A salience model"
+      ],
+      "answerIndex": 0,
+      "explanation": "Establishing measures for the extent to which the project is in compliance lets the team monitor and prove it."
+    },
+    {
+      "id": "q-410",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "During execution a new environmental regulation takes effect that affects the project. What should the PM do FIRST?",
+      "options": [
+        "Ignore it until the next phase gate",
+        "Determine the necessary approach and actions to address the compliance need",
+        "Immediately terminate the project",
+        "Add it only to the lessons learned register"
+      ],
+      "answerIndex": 1,
+      "explanation": "The PM determines the approach and actions needed to address the new compliance requirement."
+    },
+    {
+      "id": "q-411",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "The team identifies that a supplier may not meet mandated safety standards. How should this be characterized within compliance management?",
+      "options": [
+        "A potential threat to compliance",
+        "An accepted opportunity",
+        "A sunk cost",
+        "A vanity metric"
+      ],
+      "answerIndex": 0,
+      "explanation": "Recognizing that a supplier may fail a mandate is identifying a potential threat to compliance."
+    },
+    {
+      "id": "q-412",
+      "topic": "Principles & Mindset",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2; PMBOK8 Sustainability Principle",
+      "stem": "Stakeholders ask how the project will reduce its environmental footprint across its decisions. Which framework guides handling negative impacts, preferring avoidance?",
+      "options": [
+        "The Sustainability Pyramid (Compensate → Restore → Minimize → Avoid)",
+        "The Tuckman ladder",
+        "The salience model",
+        "The RACI matrix"
+      ],
+      "answerIndex": 0,
+      "explanation": "The Sustainability Pyramid prioritizes handling negative impacts, with Avoid most preferred — central to the 8th-edition sustainability principle and ECO compliance."
+    },
+    {
+      "id": "q-413",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 3 (Manage/control changes)",
+      "stem": "After baselines are approved, a stakeholder submits a scope change. What is the PM's correct path?",
+      "options": [
+        "Implement it right away to satisfy the stakeholder",
+        "Execute the change control process to assess and decide",
+        "Reject all changes after baselining",
+        "Add it silently to the backlog"
+      ],
+      "answerIndex": 1,
+      "explanation": "Approved baselines require running the formal change control process to evaluate and decide on the change."
+    },
+    {
+      "id": "q-414",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 3",
+      "stem": "A change request has been evaluated and approved by the CCB. What must the PM do to keep records consistent?",
+      "options": [
+        "Update project documentation to reflect the change",
+        "Delete the change log entry",
+        "Re-open the charter for signature",
+        "Reset the cost baseline to zero"
+      ],
+      "answerIndex": 0,
+      "explanation": "After approval and implementation, the PM updates affected project documents/baselines so records stay accurate."
+    },
+    {
+      "id": "q-415",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 3",
+      "stem": "Stakeholders are unsure whether their requested changes were approved, deferred, or rejected. What should the PM do?",
+      "options": [
+        "Communicate the status of proposed changes (e.g., via the change log)",
+        "Stop accepting change requests",
+        "Escalate every change to the sponsor",
+        "Re-baseline immediately"
+      ],
+      "answerIndex": 0,
+      "explanation": "Communicating the status of proposed changes keeps stakeholders informed; the change log tracks status."
+    },
+    {
+      "id": "q-416",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 3; PMBOK8 'scope creep'",
+      "stem": "Marketing keeps feeding small undocumented tweaks straight to developers, who build them without review, causing overruns. What is occurring and what is the fix?",
+      "options": [
+        "Progressive elaboration; accept it",
+        "Scope creep; enforce the change control process",
+        "Gold plating; reward initiative",
+        "Fast tracking; continue"
+      ],
+      "answerIndex": 1,
+      "explanation": "Bypassing change control causes scope creep; the fix is to route changes through the formal change control process."
+    },
+    {
+      "id": "q-417",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 4 (Remove impediments/manage issues)",
+      "stem": "Several impediments are blocking the team at once. With limited time, what should the PM do before acting on them?",
+      "options": [
+        "Evaluate their impact and prioritize/highlight them",
+        "Escalate all of them to the sponsor simultaneously",
+        "Ignore the minor ones permanently",
+        "Re-baseline the schedule"
+      ],
+      "answerIndex": 0,
+      "explanation": "The PM evaluates impact and prioritizes impediments so the highest-impact blockers are addressed first."
+    },
+    {
+      "id": "q-418",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 4",
+      "stem": "A blocker is outside the team's control and keeps recurring. After attempting to remove it, what is the PM's role going forward?",
+      "options": [
+        "Determine and apply an intervention strategy, reassessing continually",
+        "Wait for it to resolve itself",
+        "Remove the affected work from scope without discussion",
+        "Blame the external team in the report"
+      ],
+      "answerIndex": 0,
+      "explanation": "The PM applies an intervention strategy and continually reassesses to ensure blockers are being addressed."
+    },
+    {
+      "id": "q-419",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 4; PMBOK8 'issue'",
+      "stem": "An item previously tracked as a risk has now actually occurred and is affecting the project. What should the PM recognize and do?",
+      "options": [
+        "Recognize a risk has become an issue and manage it via the issue log",
+        "Keep it only in the risk register",
+        "Add contingency reserve and move on",
+        "Submit it to the CCB as a change"
+      ],
+      "answerIndex": 0,
+      "explanation": "When a risk materializes it becomes an issue; the PM tracks and manages it through the issue log."
+    },
+    {
+      "id": "q-420",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 4",
+      "stem": "A persistent impediment needs input from a vendor, a regulator, and an internal team to clear. What should the PM do?",
+      "options": [
+        "Collaborate with relevant stakeholders on an approach to resolve the issue",
+        "Decide alone to save time",
+        "Defer until the next phase gate",
+        "Escalate to the CEO immediately"
+      ],
+      "answerIndex": 0,
+      "explanation": "Resolving cross-party issues calls for collaborating with the relevant stakeholders on a resolution approach."
+    },
+    {
+      "id": "q-421",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 4",
+      "stem": "A servant-leader PM notices the team is repeatedly stalled waiting on environment access. What is the most aligned action?",
+      "options": [
+        "Remove or minimize the impediment so the team can flow",
+        "Add the delay to the risk register and wait",
+        "Increase status-report frequency",
+        "Reassign the blocked developers indefinitely"
+      ],
+      "answerIndex": 0,
+      "explanation": "Servant leadership and ECO Task 4 center on removing/minimizing impediments so the team can deliver."
+    },
+    {
+      "id": "q-422",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5 (Plan/manage risk); PMBOK8",
+      "stem": "At project start there is no agreement on how risks will be categorized, scored, or monitored. What should the PM create first?",
+      "options": [
+        "The risk register",
+        "The risk management plan",
+        "The change log",
+        "The issue log"
+      ],
+      "answerIndex": 1,
+      "explanation": "The risk management plan defines categories, scales, roles, and process — the governance before specific risks are logged."
+    },
+    {
+      "id": "q-423",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5; PMBOK8 'risk register'",
+      "stem": "The team identifies several threats and opportunities. Where are these captured with their probability, impact, owners, and responses?",
+      "options": [
+        "The risk register",
+        "The stakeholder register",
+        "The WBS dictionary",
+        "The communications plan"
+      ],
+      "answerIndex": 0,
+      "explanation": "Identified risks (threats and opportunities) are recorded and tracked in the risk register."
+    },
+    {
+      "id": "q-424",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5; PMBOK8 risk responses",
+      "stem": "A threat to data security can't be eliminated, but a secondary verification control would sharply cut its probability and impact. Which response is this?",
+      "options": [
+        "Mitigate",
+        "Accept",
+        "Escalate",
+        "Transfer"
+      ],
+      "answerIndex": 0,
+      "explanation": "Reducing a threat's probability and/or impact to an acceptable level is mitigation."
+    },
+    {
+      "id": "q-425",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 5 (sustainability risks)",
+      "stem": "A risk relates to long-term environmental harm from the project's outputs. Under the 2026 ECO, how should the team treat sustainability risk?",
+      "options": [
+        "As outside the project's concern",
+        "As a managed risk within the risk process (identify, analyze, respond)",
+        "As a marketing matter only",
+        "As a change request"
+      ],
+      "answerIndex": 1,
+      "explanation": "The 2026 ECO explicitly includes managing sustainability risks within the risk process."
+    },
+    {
+      "id": "q-426",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5; PMBOK8 Monitor Risks",
+      "stem": "A risk's warning triggers appear. What should the PM do?",
+      "options": [
+        "Wait until it becomes an issue",
+        "Execute the planned risk response and continue monitoring",
+        "Delete it from the register",
+        "Escalate every risk to the sponsor"
+      ],
+      "answerIndex": 1,
+      "explanation": "When triggers appear, execute the pre-planned response and keep monitoring effectiveness."
+    },
+    {
+      "id": "q-427",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5",
+      "stem": "Stakeholders need to understand how a major risk could affect the project and what is being done. What should the PM do?",
+      "options": [
+        "Communicate the status of the risk's impact on the project",
+        "Hide it to avoid alarm",
+        "Only discuss it at closure",
+        "Convert it to a change request"
+      ],
+      "answerIndex": 0,
+      "explanation": "Communicating the status of a risk's impact keeps stakeholders informed and supports decisions."
+    },
+    {
+      "id": "q-428",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5; PMBOK8 'contingency reserve'",
+      "stem": "Known IT-security risks have active responses funded inside the cost baseline. What kind of reserve covers these?",
+      "options": [
+        "Management reserve",
+        "Contingency reserve",
+        "Profit margin",
+        "Sunk cost"
+      ],
+      "answerIndex": 1,
+      "explanation": "Identified (\"known-unknown\") risks with active responses are covered by contingency reserve within the cost baseline."
+    },
+    {
+      "id": "q-429",
+      "topic": "Risk",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMP ECO 2026 — Business Environment, Task 5; PMBOK8 'risk escalation'",
+      "stem": "A risk falls entirely outside the team's authority and scope. What is the appropriate response?",
+      "options": [
+        "Accept it silently",
+        "Escalate it to the appropriate party",
+        "Mitigate it with team resources anyway",
+        "Ignore it as out of scope"
+      ],
+      "answerIndex": 1,
+      "explanation": "Risks outside the team's authority/scope should be escalated to those who can own them."
+    },
+    {
+      "id": "q-430",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 6 (Continuous improvement)",
+      "stem": "At the end of an iteration the team wants to inspect how they worked and commit to improvements. What should the PM facilitate?",
+      "options": [
+        "A retrospective",
+        "A bidder conference",
+        "A phase-gate audit",
+        "A change control board"
+      ],
+      "answerIndex": 0,
+      "explanation": "Retrospectives drive continuous improvement by inspecting the process and agreeing on changes."
+    },
+    {
+      "id": "q-431",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 6",
+      "stem": "Knowledge from resolving a tough integration problem should benefit current and future work. What should the PM do?",
+      "options": [
+        "Capture it in the lessons learned register",
+        "Keep it in the PM's head",
+        "Add it to the risk register only",
+        "Wait until closure to record anything"
+      ],
+      "answerIndex": 0,
+      "explanation": "Utilizing and recording lessons learned throughout the project supports continuous improvement."
+    },
+    {
+      "id": "q-432",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 6; PMBOK8 process improvement",
+      "stem": "Recurring defects stem from inconsistent processes across shifts. The PM wants to structurally eliminate the cause. What is the best continuous-improvement action?",
+      "options": [
+        "Apply process analysis and implement improvements",
+        "Add more end-of-line inspections",
+        "Assign blame to the slowest shift",
+        "Increase the contingency reserve"
+      ],
+      "answerIndex": 0,
+      "explanation": "Process analysis to find and remove root causes, then implementing improvements, is continuous improvement (and quality assurance)."
+    },
+    {
+      "id": "q-433",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 6",
+      "stem": "A long program runs many similar phases. How can governance best promote ongoing improvement across them?",
+      "options": [
+        "Freeze all processes after phase 1",
+        "Inspect and adapt — refine processes using lessons learned each phase",
+        "Avoid retrospectives to save time",
+        "Only review at final closure"
+      ],
+      "answerIndex": 1,
+      "explanation": "Continuous improvement means inspecting and adapting — refining processes each phase using lessons learned."
+    },
+    {
+      "id": "q-434",
+      "topic": "Principles & Mindset",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment (sustainability); PMBOK8 'triple bottom line'",
+      "stem": "Leadership wants the project evaluated not just on profit but on its people and environmental impact. Which framework captures this?",
+      "options": [
+        "Triple bottom line (profit, people, planet)",
+        "Critical path method",
+        "Earned value analysis",
+        "Precedence diagramming"
+      ],
+      "answerIndex": 0,
+      "explanation": "The triple bottom line evaluates profit, people, and planet — the basis for sustainability value emphasized in the 2026 ECO."
+    },
+    {
+      "id": "q-435",
+      "topic": "Principles & Mindset",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment; PMBOK8 Focus on Value",
+      "stem": "Midway through, market shifts mean the project will no longer deliver its intended business value. What should the PM do?",
+      "options": [
+        "Continue to completion regardless",
+        "Surface it so governance can decide to pivot, re-scope, or terminate",
+        "Quietly cut quality to finish",
+        "Treat value as the sponsor's concern only"
+      ],
+      "answerIndex": 1,
+      "explanation": "Focus on value: if value is no longer attainable, raise it so governance can decide to pivot or terminate."
+    },
+    {
+      "id": "q-436",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMP ECO 2026 — Business Environment, Task 2",
+      "stem": "A regulator requires evidence the project continuously meets a safety standard, not just at launch. What should the PM ensure is in place?",
+      "options": [
+        "A one-time inspection at go-live",
+        "Ongoing measurement and reporting of compliance over the life cycle",
+        "A larger management reserve",
+        "A single closing audit"
+      ],
+      "answerIndex": 1,
+      "explanation": "Compliance must be measured and reported continuously across the life cycle, not verified once."
     }
   ]
 }
