@@ -5,10 +5,11 @@
     "primarySource": "PMBOK_8th_Edition_Breakdown.md (verified study guide) + PMBOK Guide 8th Ed. (ANSI/PMI 99-001-2025)",
     "note": "Items tagged ecoExtended:true go beyond book-citable PMBOK 8 (agile/People/Business exam content). EVM formulas cite the PMI EVM convention.",
     "ecoWeighting": {
-      "People": 0.42,
-      "Process": 0.5,
-      "Business": 0.08
-    }
+      "People": 0.33,
+      "Process": 0.41,
+      "Business": 0.26
+    },
+    "ecoVersion": "PMP ECO 2026 (effective July 2026): People 33% / Process 41% / Business Environment 26%; ~40% predictive, ~60% adaptive-agile/hybrid"
   },
   "taxonomy": {
     "domains": [

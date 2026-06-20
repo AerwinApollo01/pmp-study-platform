@@ -18,10 +18,16 @@ automatically on every push to `main`.
 - **100 flashcards** (terms, processes, formulas)
 - **14 formulas** (EVM, PERT, EMV)
 
-> ECO mix across the full bank: People ~34% / Process ~51% / Business ~15%. The original
-> 173-item core is tuned to the exam weighting (People 42%); the imported video set is
-> process-heavy, so use the **Exam Sim** (which samples to exam weighting) or the quiz's
-> ECO-domain filter when you want a People-weighted session.
+> **Calibrated to the PMP ECO 2026** (effective July 2026): **People 33% / Process 41% /
+> Business Environment 26%**, with ~40% predictive and ~60% adaptive-agile/hybrid. The
+> Exam Sim samples to these weightings automatically.
+>
+> Note on content depth: the question bank currently skews lighter on **Business
+> Environment** (~15% of items) than the 26% the 2026 exam demands (governance, compliance,
+> change control, risk, continuous improvement). The Exam Sim still samples Business
+> Environment to 26% (backfilling as needed), but adding more Business Environment items is
+> the recommended next content step. To target the older 2021 ECO instead (42/50/8), edit
+> `meta.ecoWeighting` in `content.json`.
 
 ## Files
 | File | Purpose |

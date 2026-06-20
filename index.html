@@ -197,9 +197,9 @@
           <label for="qzDomain">ECO Domain</label>
           <select id="qzDomain">
             <option value="all">All (exam-weighted)</option>
-            <option value="People">People (42%)</option>
-            <option value="Process">Process (50%)</option>
-            <option value="Business">Business (8%)</option>
+            <option value="People">People (33%)</option>
+            <option value="Process">Process (41%)</option>
+            <option value="Business">Business Environment (26%)</option>
           </select>
         </div>
         <div>
@@ -263,7 +263,7 @@
   <section id="exam" role="tabpanel" class="hidden">
     <div class="panel" id="examSetup">
       <h2 style="margin-top:0;font-size:1.05rem">Timed exam simulator</h2>
-      <p class="muted" style="font-size:.82rem">Exam-weighted (People&nbsp;42% / Process&nbsp;50% / Business&nbsp;8%), randomized, no feedback until you submit — like the real PMP. You'll get a domain-readiness report at the end.</p>
+      <p class="muted" style="font-size:.82rem">Exam-weighted to the <b>2026 ECO</b> (People&nbsp;33% / Process&nbsp;41% / Business&nbsp;Environment&nbsp;26%), randomized, no feedback until you submit — like the real PMP. You'll get a domain-readiness report at the end.</p>
       <div class="grid2">
         <div>
           <label for="exLen">Exam length</label>
@@ -464,7 +464,7 @@
 "use strict";
 /* ============ Fallback content (used only if fetch fails on file://) ============ */
 const FALLBACK = {
-  meta:{title:"PMP (fallback)",ecoWeighting:{People:.42,Process:.5,Business:.08}},
+  meta:{title:"PMP (fallback)",ecoWeighting:{People:.33,Process:.41,Business:.26}},
   taxonomy:{topics:["Formulas/EVM","Risk","Scope"]},
   formulas:[],
   flashcards:[
@@ -969,7 +969,7 @@ function ratingOf(p){return p>=75?['above','Above Target']:p>=60?['target','Targ
 function sampleExam(n){
   const all=DATA.questions;
   if(!n||n>=all.length)return shuffle(all);
-  const w=(DATA.meta&&DATA.meta.ecoWeighting)||{People:.42,Process:.50,Business:.08};
+  const w=(DATA.meta&&DATA.meta.ecoWeighting)||{People:.33,Process:.41,Business:.26};
   const pools={};all.forEach(q=>{(pools[q.ecoDomain]||(pools[q.ecoDomain]=[])).push(q);});
   Object.keys(pools).forEach(k=>pools[k]=shuffle(pools[k]));
   const order=['People','Process','Business'];
@@ -1075,7 +1075,7 @@ function renderReport(){
     <p class="muted" style="font-size:.72rem">Heuristic bands: ≥75% Above Target · 60–74% Target · &lt;60% Below Target. PMI does not publish exact cut scores; treat as a study signal.</p>
   </div>
   <div class="panel"><h2 style="margin-top:0;font-size:1rem">Readiness by ECO domain</h2>
-    ${domOrder.map(d=>r.byDom[d]?gaugeRow(d+(d==='People'?' (42%)':d==='Process'?' (50%)':' (8%)'),r.byDom[d]):'').join('')}</div>
+    ${domOrder.map(d=>r.byDom[d]?gaugeRow((d==='Business'?'Business Environment':d)+(d==='People'?' (33%)':d==='Process'?' (41%)':' (26%)'),r.byDom[d]):'').join('')}</div>
   <div class="panel"><h2 style="margin-top:0;font-size:1rem">By approach</h2>
     ${['Predictive','Agile/Hybrid','Both'].map(a=>r.byApproach[a]?gaugeRow(a,r.byApproach[a]):'').join('')}</div>
   <div class="panel"><h2 style="margin-top:0;font-size:1rem">By topic</h2>
