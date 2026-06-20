@@ -64,22 +64,23 @@ built-in question set. **Use the live URL or a local server for the full bank.**
 2. **Quiz** — single correct answer + 3 distractors, randomized option order, immediate
    feedback with an explanation and source citation. Situational "what should the PM do next?"
    items are tagged `situational`.
-3. **ECO-domain mode** — drill People (42%) / Process (50%) / Business (8%), and filter
-   Predictive vs. Agile/Hybrid.
+3. **ECO-domain mode** — drill People (33%) / Process (41%) / Business Environment (26%),
+   and filter Predictive vs. Agile/Hybrid. (2026 ECO weightings.)
 4. **EVM calculator** — enter PV, EV, AC, BAC → SV, CV, SPI, CPI, all four EAC variants, ETC,
    VAC, and TCPI (to BAC and to EAC), each with its formula and a plain-English interpretation.
    A checkbox switches the "selected EAC" between the CPI and atypical variants.
 5. **Scheduling Lab** — interactive practice for the scheduling methods (logic lives in
    `index.html`, not `content.json`):
    - **Critical Path (CPM)** — enter activities/durations/predecessors; runs the forward &
-     backward pass to compute ES/EF/LS/LF, total float, the critical path, and project
-     duration. Includes 3 practice networks and a step-by-step explanation.
+     backward pass and renders an **SVG network diagram** (each node shows ES·Dur·EF /
+     Activity / LS·Float·LF, with the critical path highlighted in red) plus project duration.
+     Includes 3 practice networks, a step-by-step explanation, and an optional details table.
    - **Three-Point / PERT** — Beta and Triangular estimates, σ, variance, and ±1σ/±2σ ranges.
    - **Compression** — finds the cheapest critical-path crash to shorten N periods.
    - **Methods Reference** — PDM relationships, leads/lags, crashing vs. fast-tracking,
      leveling vs. smoothing, rolling wave, and adaptive scheduling (all source-cited).
 6. **Exam simulator** — a timed mock exam under real-PMP conditions: exam-weighted sampling
-   (People 42% / Process 50% / Business 8%), a countdown timer (1.3 min/question) with
+   to the 2026 ECO (People 33% / Process 41% / Business Environment 26%), a countdown timer (1.3 min/question) with
    auto-submit, a question navigator (answered / flagged / current) with flag-for-review, and
    no feedback until you submit. The end report shows an overall score, an Above Target /
    Target / Below Target band, readiness gauges by ECO domain / approach / topic, and a full
@@ -130,13 +131,24 @@ appear automatically in the filter dropdowns.
 > not editable via `content.json`.
 
 ## Sources & accuracy
-- Primary source: **`PMBOK_8th_Edition_Breakdown.md`** (your verified study guide) plus the
-  official **PMBOK® Guide 8th Edition** PDF for verification.
-- Every flashcard and question carries a `source` field.
-- EVM and CPM math are independently verified (worked test cases match standard PMI values).
-- `ecoExtended: true` marks content that goes beyond the book — correct PMP/ECO exam knowledge
-  that isn't directly quotable from PMBOK 8 (e.g., Tuckman stages, conflict modes, the
-  channels formula). The UI badges these so you know they aren't book-citable.
+Every flashcard and question carries a `source` field, and the bank mixes three provenance
+tiers — the `source` text tells you which, so you always know the trust level:
+
+1. **Verified study-guide core (173 Q + 100 flashcards)** — authored from
+   **`PMBOK_8th_Edition_Breakdown.md`** (the verified study guide) and cross-checked against
+   the official **PMBOK® Guide 8th Edition** PDF. These cite specific guide sections/pages.
+2. **Video-imported (110 Q)** — situational questions transcribed from a PMBOK 8 Q&A video.
+   Each `source` says `via Q&A video (yt:…) — not independently verified`. One answer-key
+   error in the source set was corrected (Q54 → Verified Deliverables).
+3. **2026-ECO-aligned (36 Q)** — Business Environment questions mapped to the
+   **PMP Examination Content Outline 2026** tasks (extracted from PMI's official PDF), sourced
+   to those tasks plus PMBOK 8 where applicable.
+
+- **EVM and CPM math are independently verified** (worked test cases match standard PMI values).
+- `ecoExtended: true` marks content that goes beyond book-citable PMBOK 8 — correct PMP/ECO
+  exam knowledge that isn't directly quotable from the guide (e.g., Tuckman stages, conflict
+  modes, the channels formula, most People/Business-Environment behavioral items). The UI
+  badges these so you know they aren't book-citable.
 
 ## Validating content
 A quick integrity check (Node.js):
