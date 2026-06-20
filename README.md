@@ -12,9 +12,16 @@ Open it on any device — phone, tablet, or desktop. Hosted on GitHub Pages and 
 automatically on every push to `main`.
 
 ## What's inside
-- **173 quiz questions**, weighted to the PMP exam (**People 42% / Process 45% / Business 13%**)
+- **283 quiz questions** — 173 authored from the verified study guide plus 110 situational
+  questions imported from a PMBOK 8 Q&A video (each tagged in its `source` as
+  `via Q&A video … not independently verified`, so you always know the trust level)
 - **100 flashcards** (terms, processes, formulas)
 - **14 formulas** (EVM, PERT, EMV)
+
+> ECO mix across the full bank: People ~34% / Process ~51% / Business ~15%. The original
+> 173-item core is tuned to the exam weighting (People 42%); the imported video set is
+> process-heavy, so use the **Exam Sim** (which samples to exam weighting) or the quiz's
+> ECO-domain filter when you want a People-weighted session.
 
 ## Files
 | File | Purpose |

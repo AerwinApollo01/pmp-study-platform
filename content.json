@@ -4371,6 +4371,1986 @@
       ],
       "answerIndex": 1,
       "explanation": "Disagree-and-commit works when the leader transparently explains the rationale and genuinely acknowledges input."
+    },
+    {
+      "id": "q-201",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.12 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Stratus Innovations' leadership proposes a new customer platform that will impact multiple teams, must be released before October next year, and may involve experts from other systems/teams. How should this initiative be managed?",
+      "options": [
+        "As a portfolio",
+        "As a program",
+        "As a project",
+        "As ongoing operations"
+      ],
+      "answerIndex": 2,
+      "explanation": "A project is a temporary initiative undertaken to create value by producing deliverables; it has a defined end (the release date) and a unique cross-team scope."
+    },
+    {
+      "id": "q-202",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.14 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Daniel is preparing a business case for a new mobile banking platform. Expected outcomes include increased transaction revenue, improved customer satisfaction, and enhanced brand reputation. How should he categorize these benefits?",
+      "options": [
+        "Revenue increase is intangible; customer satisfaction is tangible",
+        "Both are tangible benefits",
+        "Both are intangible benefits",
+        "Revenue increase is tangible; customer satisfaction is intangible"
+      ],
+      "answerIndex": 3,
+      "explanation": "Tangible benefits can be quantified financially (revenue/profit); intangible benefits (satisfaction, brand) hold value but are hard to measure financially."
+    },
+    {
+      "id": "q-203",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.18 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "At Secure Bank, while developing the project management plan you identify government regulations, organizational culture, and internal IT infrastructure as influences. How should you account for these?",
+      "options": [
+        "Treat them as enterprise environmental factors (EEFs)",
+        "Identify them purely as project risks",
+        "Include them as part of the scope baseline",
+        "Treat them as standard project deliverables"
+      ],
+      "answerIndex": 0,
+      "explanation": "EEFs are conditions/infrastructure not under the team's direct control that can influence, constrain, or direct the project."
+    },
+    {
+      "id": "q-204",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.19 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Rose's PMO requires her to use a standard project management plan template and follow procedures derived from previous projects. How should she classify these templates and procedures?",
+      "options": [
+        "As project deliverables",
+        "As project assumptions",
+        "As organizational process assets (OPAs)",
+        "As enterprise environmental factors"
+      ],
+      "answerIndex": 2,
+      "explanation": "OPAs include the plans, processes, policies, templates, and historical knowledge bases of the performing organization."
+    },
+    {
+      "id": "q-205",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.22 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "At BuildMax Engineering you are assigned dedicated project resources and granted full authority over the project budget and decisions. What organizational structure is this?",
+      "options": [
+        "Balanced matrix",
+        "Weak matrix",
+        "Project-oriented",
+        "Functional"
+      ],
+      "answerIndex": 2,
+      "explanation": "In a project-oriented structure the PM has high/total authority, full budget control, and dedicated team resources."
+    },
+    {
+      "id": "q-206",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.22 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Liam, a sales manager at Prime Manufacturing, wants to start a process-improvement initiative using only his existing daily team, with no extra project budget or external authority. What structure is he in?",
+      "options": [
+        "Weak matrix",
+        "Functional",
+        "Project-oriented",
+        "Balanced matrix"
+      ],
+      "answerIndex": 1,
+      "explanation": "In a functional structure, work is managed within an existing department; the manager has no extra project budget or authority outside their line."
+    },
+    {
+      "id": "q-207",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM pp.22-26 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Sophia performs team coordination, collaboration, applying technical expertise, and facilitating stakeholder feedback. Which function is NOT associated with managing projects?",
+      "options": [
+        "Providing project oversight and coordination",
+        "Facilitating and supporting team work",
+        "Applying specialized technical/process expertise",
+        "Performing ongoing operational support"
+      ],
+      "answerIndex": 3,
+      "explanation": "Projects are temporary with a start and end; ongoing operational maintenance/support is regular operations, not project work."
+    },
+    {
+      "id": "q-208",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.274 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "An employee secures funding for your project, provides high-level strategic direction, and helps remove cross-departmental obstacles. What role is this?",
+      "options": [
+        "Product Owner",
+        "Project Sponsor",
+        "Project Customer",
+        "Project Manager"
+      ],
+      "answerIndex": 1,
+      "explanation": "The sponsor provides executive resources, funding, and political support, and is accountable for enabling project success."
+    },
+    {
+      "id": "q-209",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.29 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Roy's project management team collaborates with stakeholders and functional managers to align outcomes with company objectives. Which task is specifically the project management team's?",
+      "options": [
+        "Provide exact duration and cost estimates on individual tasks",
+        "Coordinate sideways with functional managers for demands on critical resources",
+        "Verify all final work packages pass baseline quality inspections",
+        "Formally approve the final product on behalf of the customer"
+      ],
+      "answerIndex": 1,
+      "explanation": "The project management team negotiates sideways with line/portfolio managers and other project groups to resolve overlapping resource constraints and priorities."
+    },
+    {
+      "id": "q-210",
+      "topic": "Principles & Mindset",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.41 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A sponsor asks exactly when the project will begin delivering visible value. What do you tell them?",
+      "options": [
+        "Value is realized only after the project is completely closed out",
+        "Benefits are realized only during mid-stage execution",
+        "Value is realized only after metrics are formally measured",
+        "Value can be realized throughout execution, at the end, or long after completion"
+      ],
+      "answerIndex": 3,
+      "explanation": "Value delivery is fluid: it can be realized incrementally during the project, at a phase's conclusion, or months/years after close."
+    },
+    {
+      "id": "q-211",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.43 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A functional manager demands structural assurance that quality standards will be consistently met for deliverables passed to their department. How do you handle quality?",
+      "options": [
+        "Verify quality entirely through final inspection before delivery",
+        "Integrate quality directly into processes to consistently meet thresholds",
+        "Manage quality by a separate siloed team for independence",
+        "Focus quality strictly on correcting defects as identified"
+      ],
+      "answerIndex": 1,
+      "explanation": "Embedding quality checkpoints directly into execution processes (rather than relying on after-the-fact inspection) reduces the overall cost of quality."
+    },
+    {
+      "id": "q-212",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.48 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A serious conflict between vendor teams over shift allocations is hurting field productivity and threatening critical-path milestones. How should Raphael address it?",
+      "options": [
+        "Force vendors to strictly follow original contract terms",
+        "Stand back and let the vendors resolve it themselves",
+        "Facilitate a cross-team discussion to find root causes and a joint solution",
+        "Assign your top engineering lead to manage the conflict"
+      ],
+      "answerIndex": 2,
+      "explanation": "An accountable, collaborative leader facilitates root-cause problem-solving that addresses the core friction while preserving morale."
+    },
+    {
+      "id": "q-213",
+      "topic": "Life Cycles & Approaches",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.59 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "An executive worries about high projected staffing costs and several early risks. What cost/risk relationship do you explain (predictive lifecycle)?",
+      "options": [
+        "Staffing costs highest at initiation; risk peaks near closure",
+        "Staffing drops mid-project; risk stays linear",
+        "Cost and staffing rise as work progresses and drop near completion, while risk decreases over time",
+        "Cost and staffing stay flat; risk fluctuates unpredictably"
+      ],
+      "answerIndex": 2,
+      "explanation": "In predictive lifecycles risk/uncertainty is highest early (information is scarce) and falls over time, while staffing cost peaks during development and drops at close."
+    },
+    {
+      "id": "q-214",
+      "topic": "Life Cycles & Approaches",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.61 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Dr. Mitchell's drug-development project is highly regulated with mandatory phase-gate approvals; scope, schedule, and cost are locked early with strict change control and extensive upfront planning. Which approach?",
+      "options": [
+        "Adaptive",
+        "Incremental",
+        "Hybrid",
+        "Predictive"
+      ],
+      "answerIndex": 3,
+      "explanation": "A predictive (waterfall) approach fits when scope can be stabilized and baselined upfront and rigorous change control is required."
+    },
+    {
+      "id": "q-215",
+      "topic": "Agile/Adaptive",
+      "ecoDomain": "Process",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.63 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Jason's team works in short timeboxed iterations, delivers small functionality regularly, refines based on continuous user feedback, and a single role owns the prioritized backlog. Which approach?",
+      "options": [
+        "Adaptive",
+        "Predictive",
+        "Hybrid",
+        "Incremental"
+      ],
+      "answerIndex": 0,
+      "explanation": "Adaptive (agile) approaches use brief iterations, immediate user feedback, and a product owner managing the value stream in volatile environments."
+    },
+    {
+      "id": "q-216",
+      "topic": "Life Cycles & Approaches",
+      "ecoDomain": "Process",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8: Standard for PM p.65 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Ethan's platform has a rapidly shifting frontend while the core data-center infrastructure needs rigorous upfront engineering and strict baseline change control, merged via an agile sprint at close. Which approach?",
+      "options": [
+        "Predictive",
+        "Hybrid",
+        "Incremental",
+        "Adaptive"
+      ],
+      "answerIndex": 1,
+      "explanation": "Hybrid blends predictive and adaptive elements, used when one project contains stable components alongside volatile, innovative modules."
+    },
+    {
+      "id": "q-217",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.14 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Taking over the Orion CRM upgrade, you find critical stakeholders unavailable, the user group disengaged, and success criteria blurred. These conditions are an example of what?",
+      "options": [
+        "Baseline project constraints",
+        "Immediate operational issues",
+        "Leading performance indicators",
+        "Lagging performance indicators"
+      ],
+      "answerIndex": 2,
+      "explanation": "Leading indicators point to upcoming trends/risks before they show up as lagging results; disengaged stakeholders and vague success metrics are early warning flags."
+    },
+    {
+      "id": "q-218",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.17 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "The business case is approved and stakeholders identified; leadership demands the team start coding immediately. What is your correct next step?",
+      "options": [
+        "Create the project management plan",
+        "Organize a formal team kickoff meeting",
+        "Work with the sponsor to approve and execute the Project Charter",
+        "Perform a make-or-buy analysis"
+      ],
+      "answerIndex": 2,
+      "explanation": "Skipping initiation breaks governance. The charter must be signed first to authorize the project and grant the PM authority to apply resources."
+    },
+    {
+      "id": "q-219",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.17 & p.116 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Raw material costs rise sharply; stakeholders question whether the cost expansion outweighs delivered asset value and whether the project is still viable. What document do you review?",
+      "options": [
+        "Project Management Plan",
+        "Financial Management Plan",
+        "Project Charter",
+        "Business Case"
+      ],
+      "answerIndex": 3,
+      "explanation": "The business case is the economic feasibility study used to establish whether project benefits remain worth the investment over time."
+    },
+    {
+      "id": "q-220",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.17 & p.114 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Elijah compiles early-stage cost/schedule parameters driven by external variables (utility availability, vendor timeline accuracy). Which document will he NOT populate with these?",
+      "options": [
+        "Assumption Log",
+        "Issue Log",
+        "Risk Register",
+        "Basis of Estimates"
+      ],
+      "answerIndex": 1,
+      "explanation": "An issue log tracks current problems that have already occurred; early uncertainties and assumptions go in the assumption log, risk register, or basis of estimates."
+    },
+    {
+      "id": "q-221",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.18-19 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After a kickoff, engineering leads provide individual deployment strategies. You want to synthesize them into an evolving document that can be reconfigured over time. What next?",
+      "options": [
+        "Draft the Configuration Management Plan",
+        "Consolidate the components into the Project Management Plan",
+        "Establish the Change Management Plan",
+        "Baseline the Project Charter"
+      ],
+      "answerIndex": 1,
+      "explanation": "The project management plan is the central master repository that integrates and aligns all sub-domain plans and baselines."
+    },
+    {
+      "id": "q-222",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.19-20 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A team is defining selection criteria and contract frameworks and evaluating internal vs. outsourced manufacture; no vendors contacted yet. What should the PM do next?",
+      "options": [
+        "Issue final procurement documents and request proposals",
+        "Evaluate vendor bids and select a supplier",
+        "Develop the sourcing strategy including formal make-or-buy decisions",
+        "Publicly advertise the procurement opportunity"
+      ],
+      "answerIndex": 2,
+      "explanation": "Before contacting vendors, the team documents its sourcing strategy and completes a make-or-buy analysis to justify outsourcing."
+    },
+    {
+      "id": "q-223",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.19-20 & p.265 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Multiple prospective vendors want to bid, but each has conflicting assumptions about the project scope. What do you do to align them?",
+      "options": [
+        "Conduct a formal Bidder Conference",
+        "Refine the Source Selection Criteria",
+        "Perform a Make-or-Buy analysis",
+        "Advertise the proposal to secondary vendors"
+      ],
+      "answerIndex": 0,
+      "explanation": "A bidder conference brings all prospective sellers together so everyone receives identical information and equal scope clarifications."
+    },
+    {
+      "id": "q-224",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.20 & p.141 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Regional teams propose conflicting procurement methods, causing gridlock. Irene must align the procurement approach, defining acceptable contract types and vendor evaluation frameworks. What artifact?",
+      "options": [
+        "Project Bid Documents",
+        "Make-or-Buy analysis sheet",
+        "Procurement Statement of Work (SOW)",
+        "Sourcing Strategy Plan"
+      ],
+      "answerIndex": 3,
+      "explanation": "The sourcing strategy plan dictates how vendors are selected, how procurement workflows run, and the contract-type logic across the lifecycle."
+    },
+    {
+      "id": "q-225",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.19-20 & p.180 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A critical automated module can be built internally or bought externally; stakeholders push to start now despite a constrained budget. What should Ricky do next for a data-driven choice?",
+      "options": [
+        "Draft the Procurement Management Plan",
+        "Run an immediate Cost-Benefit analysis",
+        "Complete a Make-or-Buy analysis",
+        "Issue RFPs to open sellers"
+      ],
+      "answerIndex": 2,
+      "explanation": "A make-or-buy analysis is the technique used to weigh internal capability and budget against external purchase options."
+    },
+    {
+      "id": "q-226",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.20 & p.248 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Aiden needs standard off-the-shelf electrical components with clearly documented specs from multiple vendors at varying prices. Which procurement document should he issue?",
+      "options": [
+        "Request for Proposal (RFP)",
+        "Request for Information (RFI)",
+        "Bidder Conference Invitation",
+        "Request for Quote (RFQ)"
+      ],
+      "answerIndex": 3,
+      "explanation": "An RFQ is used when requirements are commoditized and clearly defined, making price the primary selection factor."
+    },
+    {
+      "id": "q-227",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.22 & p.116 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Dozens of minor scope tweaks have been verbally requested throughout execution, causing confusion about what to build and in what order. What should Reena review first?",
+      "options": [
+        "Scope Baseline Statement",
+        "Change Log",
+        "Project Issue Log",
+        "Risk Register"
+      ],
+      "answerIndex": 1,
+      "explanation": "The change log tracks all requested modifications, their status (approved/deferred/rejected), and their implementation sequence."
+    },
+    {
+      "id": "q-228",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.22-23 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "During execution a stakeholder reports outputs showing unstable consistency metrics. What should you do?",
+      "options": [
+        "Reassess the scope and quality management plans",
+        "Ensure deliverables are produced in strict compliance with the Scope Baseline",
+        "Escalate the deviation to the executive steering committee",
+        "Run a comprehensive risk workshop on quality variance"
+      ],
+      "answerIndex": 1,
+      "explanation": "Managing execution requires ensuring physical outputs match the parameters detailed in the approved scope baseline."
+    },
+    {
+      "id": "q-229",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.22-23 & p.123 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Mid-execution, a security officer discovers unauthorized access to sensitive project test environments. What should the PM do FIRST?",
+      "options": [
+        "Note the breach in the Project Issue Log",
+        "Gather the team to brainstorm security patches",
+        "Escalate the breach to senior security executives",
+        "Update the Risk Register with environment threats"
+      ],
+      "answerIndex": 0,
+      "explanation": "An adverse event that has already occurred is an issue; the first step is to log it in the issue log to establish formal tracking before secondary mitigation."
+    },
+    {
+      "id": "q-230",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.23 & p.188 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Quality inspections repeatedly find defects from inconsistent procedures across shifts, causing rework. Omar wants to eliminate the root cause and ensure process consistency. What next?",
+      "options": [
+        "Update the standard manufacturing work instructions",
+        "Deploy field check sheets on the conveyor line",
+        "Allocate a dedicated Quality Lead to monitor shifts",
+        "Apply process analysis and systematic quality assurance improvements"
+      ],
+      "answerIndex": 3,
+      "explanation": "Quality assurance uses process analysis to evaluate inefficiencies, isolate root causes of variance, and drive corrective process improvements."
+    },
+    {
+      "id": "q-231",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.23-24 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Severe inconsistencies are observed in how cross-functional teams follow procedures and standards; leadership wants to identify structural process gaps. Most appropriate action?",
+      "options": [
+        "Increase inspections to find defects in deliverables",
+        "Rebaseline the project",
+        "Conduct additional product testing",
+        "Perform systematic quality audits to identify process improvement areas"
+      ],
+      "answerIndex": 3,
+      "explanation": "Quality audits are structured independent reviews of whether activities comply with policies/processes; they target process improvement, not product defects."
+    },
+    {
+      "id": "q-232",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.23-24 & p.151 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A team misses deadlines; juniors do unnecessary work (gold plating) while seniors report process inefficiencies and frequent defects. What should the PM do?",
+      "options": [
+        "Ask the team to swarm the immediate tasks",
+        "Implement a general department-wide training program",
+        "Collaborate with the team to construct functional checklists",
+        "Reassign delayed tasks to more experienced members"
+      ],
+      "answerIndex": 2,
+      "explanation": "A checklist verifies that required steps/parameters are consistently performed; building them with the team standardizes the work and reduces defects."
+    },
+    {
+      "id": "q-233",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.24-26 & p.123 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After facilitating a problem-solving session that resolved a developer/compliance conflict, what should you do with this new information?",
+      "options": [
+        "Update the Risk Register with the resolved conflict",
+        "Document the experience in the Lessons Learned Register",
+        "Archive the data into Organizational Process Assets",
+        "Develop a Knowledge Management Plan"
+      ],
+      "answerIndex": 1,
+      "explanation": "The lessons learned register records knowledge gained during execution and is updated continuously throughout the life cycle, not just at closure."
+    },
+    {
+      "id": "q-234",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 pp.24-26 & p.145 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After a major data-migration wave, big discrepancies between expected and actual baselines cause rework and missed milestones. What should you do next?",
+      "options": [
+        "Conduct an After-Action Review (AAR) with the team",
+        "Schedule an emergency risk workshop",
+        "Perform a SWOT analysis",
+        "Adjust the schedule baseline and resource allocations"
+      ],
+      "answerIndex": 0,
+      "explanation": "An After-Action Review (retrospective) analyzes what happened, why, and how to improve in the next phase or iteration."
+    },
+    {
+      "id": "q-235",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.26-27 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "James sees cost and schedule data trending off track and stakeholders demand a status briefing. What must he do FIRST?",
+      "options": [
+        "Implement immediate corrective actions",
+        "Update the Project Management Plan",
+        "Analyze raw Work Performance Data to generate Work Performance Information",
+        "Escalate the trend to the executive team"
+      ],
+      "answerIndex": 2,
+      "explanation": "Raw Work Performance Data must be analyzed against the baselines to become meaningful Work Performance Information before reporting."
+    },
+    {
+      "id": "q-236",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.27 & p.150 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A team repeatedly submits components late for quality validation, threatening the critical path. The PM wants to prevent further occurrences. What should the PM do?",
+      "options": [
+        "Raise a change request to expand the timeline baselines",
+        "Perform an Ishikawa (cause-and-effect) analysis with the team",
+        "Review the Quality Management Plan with line managers",
+        "Initiate an internal quality process audit"
+      ],
+      "answerIndex": 1,
+      "explanation": "To prevent recurrence you must find the root cause; an Ishikawa/fishbone diagram maps potential process variables to isolate it."
+    },
+    {
+      "id": "q-237",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.28-29 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After baselines are approved, an executive proposes a new design change impacting cost and schedule; the team wants to implement immediately. How should Leah handle it?",
+      "options": [
+        "Submit a formal change request and analyze impacts before execution",
+        "Review projected benefits and authorize immediate implementation",
+        "Defer the change until mid-stage performance data is processed",
+        "Update the baselines and broadcast the change"
+      ],
+      "answerIndex": 0,
+      "explanation": "Once baselined, any modification goes through formal change control: document the request and assess impacts on cost, schedule, scope, and risk before authorization."
+    },
+    {
+      "id": "q-238",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.28-29 & p.116 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Multiple change requests arise at once: one developer implements a change immediately while a business analyst holds rogue sessions to evaluate another; you cannot track configurations. What next?",
+      "options": [
+        "Review the Change Management Plan with the team",
+        "Get an operational directive from the CCB",
+        "Halt execution to re-index the Change Log",
+        "Approve the most critical change requests immediately"
+      ],
+      "answerIndex": 0,
+      "explanation": "When unauthorized change execution emerges, align the team with the approved change management plan, which defines the governance process for submittal, evaluation, and implementation."
+    },
+    {
+      "id": "q-239",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.29 & p.163 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A critical software patch must deploy immediately to prevent catastrophic hardware failure; the team is divided and time is severely limited. Which decision-making model should Marina apply?",
+      "options": [
+        "Collaborative group brainstorming and consensus",
+        "Majority voting on the options",
+        "Multi-criteria decision analysis matrix",
+        "Autocratic decision-making to direct the path"
+      ],
+      "answerIndex": 3,
+      "explanation": "Although collaboration is generally preferred, autocratic decision-making fits high-stakes crises where time is critical and decisive action is mandatory."
+    },
+    {
+      "id": "q-240",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.31-33 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Near a predictive project's final milestone, line managers demand resources be released immediately. Olivia wants clean administrative closure. What should she NOT do?",
+      "options": [
+        "Confirm all deliverables are completed and formally accepted",
+        "Verify all baseline costs have been charged to the budget",
+        "Formally release personnel before final exit criteria are checked",
+        "Ensure documentation is updated and active issues are closed"
+      ],
+      "answerIndex": 2,
+      "explanation": "Staff/resources should not be released or reassigned until formal closure activities and exit criteria are verified complete."
+    },
+    {
+      "id": "q-241",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.31-33 & p.121 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A component was handed to operations, but team members keep getting pulled back to resolve issues. The PM wants to audit what was confirmed at handover. Which artifacts?",
+      "options": [
+        "Procurement agreements and OPA update logs",
+        "The Final Quality Report and Lessons Learned Register",
+        "The Project Final Report and Scope Management Plan",
+        "The Project Final Report and documented OPA updates"
+      ],
+      "answerIndex": 3,
+      "explanation": "Closure requires a final report summarizing performance, confirming deliverable transfer, and updating OPAs to verify the formal transition."
+    },
+    {
+      "id": "q-242",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.40 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Before gathering specifications, leadership wants a systematic process so only value-adding work is performed and scope creep is engineered out. What is your correct next step?",
+      "options": [
+        "Map the Work Breakdown Structure",
+        "Author and baseline the Scope Management Plan",
+        "Schedule elicitation sessions for requirements",
+        "Run scope validation loops with the client"
+      ],
+      "answerIndex": 1,
+      "explanation": "The scope management plan is developed first; it defines how scope will be defined, developed, monitored, controlled, and validated."
+    },
+    {
+      "id": "q-243",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.40-41 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A new app's stakeholders have polarized, conflicting expectations on features. The sponsor asks how you'll gather and filter requirements for true value. Which techniques?",
+      "options": [
+        "Map a Requirements Traceability Matrix",
+        "Conduct targeted focus groups and benchmarking",
+        "Construct the Scope Baseline immediately",
+        "Run quality audits against early specs"
+      ],
+      "answerIndex": 1,
+      "explanation": "Focus groups surface stakeholder expectations and benchmarking compares features against market parameters to ground polarized requirements."
+    },
+    {
+      "id": "q-244",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.40-41 & pp.131-132 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Two streams (one agile, one predictive) merge; confusion emerges over varied requirements and tracing them to delivery. What should the PM do?",
+      "options": [
+        "Construct and deploy a Requirements Traceability Matrix (RTM)",
+        "Consolidate parameters into a single Product Backlog",
+        "Decompose all work into a linear WBS",
+        "Update the Requirements Management Plan"
+      ],
+      "answerIndex": 0,
+      "explanation": "An RTM links requirements from origin to the deliverables that satisfy them, providing structural tracking across hybrid environments."
+    },
+    {
+      "id": "q-245",
+      "topic": "Scope",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.40-41 & p.130 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "You are collecting requirements that define the organization's high-level strategic goals, business case justification, and long-term intended outcomes. What classification are these?",
+      "options": [
+        "Solution Requirements",
+        "Stakeholder Requirements",
+        "Business Requirements",
+        "Transition Requirements"
+      ],
+      "answerIndex": 2,
+      "explanation": "Business requirements capture the high-level needs of the organization: strategic objectives, goals, and the economic justification for the project."
+    },
+    {
+      "id": "q-246",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 p.41 & p.168 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A wearable fitness device shows inconsistent telemetry; the root cause is unknown, the team has competing theories, and stakeholders want a user-centric framework. What approach?",
+      "options": [
+        "Team affinity diagramming",
+        "Kano analysis prioritization",
+        "Run a Design Thinking framework",
+        "Pareto analysis on bug logs"
+      ],
+      "answerIndex": 2,
+      "explanation": "Design thinking is human-centered: diverge to understand user needs, isolate the real problem, and iterate prototypes from direct feedback."
+    },
+    {
+      "id": "q-247",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 pp.40-41 & p.184 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Workshops are dominated by a few vocal, high-paid managers, drowning out technical experts; time is running out. Which technique neutralizes this bias?",
+      "options": [
+        "Open collaborative brainstorming",
+        "Individual interviews over two weeks",
+        "A general focus group with a timebox",
+        "Nominal Group Technique with anonymous prioritization"
+      ],
+      "answerIndex": 3,
+      "explanation": "The nominal group technique adds anonymous voting/ranking to brainstorming so all participants have equal influence and dominant voices can't control prioritization."
+    },
+    {
+      "id": "q-248",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.41 & p.149 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Jane's team has only sketched a few product concepts; the sponsor demands ideation speed increase dramatically to hit planning windows. Which technique?",
+      "options": [
+        "Individual structured interviews",
+        "An open, rapid-fire Brainstorming session",
+        "A Nominal Group Technique matrix",
+        "An Affinity Diagram block"
+      ],
+      "answerIndex": 1,
+      "explanation": "Brainstorming rapidly generates a large volume of diverse ideas in a short time within a collaborative team setting."
+    },
+    {
+      "id": "q-249",
+      "topic": "Agile/Adaptive",
+      "ecoDomain": "Process",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 p.41 & p.187 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Only one feature can be built next sprint; each has different value potential and duration. Sam wants to maximize immediate return with a standard agile economic metric. Which calculation?",
+      "options": [
+        "MoSCoW categorization",
+        "100-Point allocation voting",
+        "Cost of Delay Divided by Duration (CD3)",
+        "Kano satisfaction scaling"
+      ],
+      "answerIndex": 2,
+      "explanation": "CD3 prioritizes features by dividing economic value (cost of delay) by delivery duration, optimizing value throughput under constraint."
+    },
+    {
+      "id": "q-250",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.41 & p.149 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "The team struggles to innovate features; the sponsor requests proven frameworks modeled on successful installations in comparable organizations. Which tool?",
+      "options": [
+        "Benchmarking",
+        "Analogous cost estimating",
+        "Domain-specific focus groups",
+        "Technical expert panels"
+      ],
+      "answerIndex": 0,
+      "explanation": "Benchmarking compares planned practices, processes, and product metrics against comparable world-class organizations to identify best practices."
+    },
+    {
+      "id": "q-251",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.41-42 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Jonah's team must decompose a high-level scope baseline into small, manageable components to enable accurate scheduling, resource tracking, and cost control. What should he construct?",
+      "options": [
+        "A Work Breakdown Structure (WBS)",
+        "A prioritized Product Backlog",
+        "A Requirements Traceability Matrix",
+        "A Quality Management Plan"
+      ],
+      "answerIndex": 0,
+      "explanation": "A WBS is a hierarchical decomposition of the total scope into manageable work packages."
+    },
+    {
+      "id": "q-252",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.42 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Nate has decomposed scope to the lowest tier of work packages and wants to inject cost assumptions, resource profiles, durations, and quality constraints into each. What should he generate?",
+      "options": [
+        "A Responsibility Assignment Matrix",
+        "A Quality Control Checklist",
+        "An updated Requirements Traceability Matrix",
+        "A WBS Dictionary"
+      ],
+      "answerIndex": 3,
+      "explanation": "The WBS dictionary provides detailed deliverable, activity, and scheduling metadata for each work package in the WBS."
+    },
+    {
+      "id": "q-253",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.42 & pp.129-130 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Mid-stage monitoring finds process variations and quality deviations across channels; stakeholders want a summary of failures and remediation plans. What document should Diane compile?",
+      "options": [
+        "Work Performance Data dump",
+        "Scope Baseline Variance Report",
+        "Integrated Change Request Log",
+        "Quality Report"
+      ],
+      "answerIndex": 3,
+      "explanation": "A quality report logs quality issues, process-improvement recommendations, and quality-control outcomes for stakeholder review."
+    },
+    {
+      "id": "q-254",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.44 & p.143 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Concrete components have passed internal quality testing; the client is auditing them against contractual acceptance criteria for formal sign-off. What key input must Marcus provide?",
+      "options": [
+        "Work Performance Reports",
+        "Validated Deliverables dashboard",
+        "Change Request approval metrics",
+        "Verified Deliverables"
+      ],
+      "answerIndex": 3,
+      "explanation": "Verified deliverables are inspected and confirmed correct by Quality Control; they are the core input to Validate Scope, where the customer formally accepts them. (Corrected: the video's key marked C, but its own justification names Verified Deliverables = D.)"
+    },
+    {
+      "id": "q-255",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.49 & p.139 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Leadership wants a unifying framework governing scheduling adjustments, baseline changes, and dependency configurations across regions. What should Priya generate?",
+      "options": [
+        "A Project Schedule Model network diagram",
+        "A Milestone Schedule chart",
+        "A Resource Management Plan",
+        "A Schedule Management Plan"
+      ],
+      "answerIndex": 3,
+      "explanation": "The schedule management plan establishes the criteria and activities for developing, monitoring, and controlling the schedule model."
+    },
+    {
+      "id": "q-256",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.49 & p.139 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Before drafting schedule policies, you must analyze a variable that dictates whether to use long-term milestone Gantts with change logs or fluid roadmaps with velocity-tracked sprints. Which input?",
+      "options": [
+        "The chronological sequence of deliverables",
+        "Activity duration estimation frameworks",
+        "The selected project Development Approach",
+        "Schedule compression scripts"
+      ],
+      "answerIndex": 2,
+      "explanation": "The development approach (predictive/adaptive/hybrid) dictates how the schedule model is built and managed."
+    },
+    {
+      "id": "q-257",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.49 & p.138 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After modeling dependencies, resources, and sequencing, the steering committee signs off on the final timeline. What should Noah do immediately before production tracking?",
+      "options": [
+        "Authorize the team to begin delivery",
+        "Establish and lock the formal Schedule Baseline",
+        "Map schedule components to the reporting suite",
+        "Re-verify resource calendars"
+      ],
+      "answerIndex": 1,
+      "explanation": "Once approved, the schedule model is locked as the schedule baseline — the benchmark against which execution variance is tracked."
+    },
+    {
+      "id": "q-258",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.50 & p.193 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Three critical-path blocks need the same specialized engineer at overlapping times, creating overallocation and delay risk. Which technique should the PM execute?",
+      "options": [
+        "Resource Leveling",
+        "Resource Fast-Tracking",
+        "Schedule Crashing",
+        "Resource Smoothing"
+      ],
+      "answerIndex": 0,
+      "explanation": "Resource leveling adjusts start/finish dates to resolve overallocation; it can change the critical path and extend the end date."
+    },
+    {
+      "id": "q-259",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.49-50 & p.196 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Near-term steps are clear but long-term blocks are ambiguous due to evolving requirements, and the sponsor demands an immediate start. What framework should the PM apply?",
+      "options": [
+        "Bottom-Up duration estimation",
+        "Direct schedule model approval",
+        "Rolling Wave Planning",
+        "Qualitative risk padding"
+      ],
+      "answerIndex": 2,
+      "explanation": "Rolling wave planning details near-term work while leaving future work at a high level in the WBS until requirements stabilize."
+    },
+    {
+      "id": "q-260",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.50 & pp.179-180 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Graphics must be finalized before printing; labeling can begin as soon as early drafts are approved; safety inspections must wait two days after manufacturing concludes. What must Raina configure?",
+      "options": [
+        "Schedule Crashing parameters",
+        "Leads and Lags",
+        "Fast-Tracking models",
+        "Progressively elaborated durations"
+      ],
+      "answerIndex": 1,
+      "explanation": "A lead lets a successor start early (overlap); a lag imposes an intentional delay (e.g., a two-day inspection window) within a dependency."
+    },
+    {
+      "id": "q-261",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.53 & p.144 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Elena sees variations between actual and planned task durations and needs a structured baseline comparison to judge whether they are critical-path deviations. What must she analyze?",
+      "options": [
+        "Schedule basis of estimates",
+        "Historical velocity charts",
+        "Work Performance Information",
+        "The project status report"
+      ],
+      "answerIndex": 2,
+      "explanation": "Work Performance Information compares raw execution data to the baselines to yield meaningful indicators like SV and SPI."
+    },
+    {
+      "id": "q-262",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 pp.53-54 & p.150 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Deep timeline delays span parallel activities; leads propose re-sequencing options with complex trade-offs. How should Aaron mathematically determine the optimal schedule to minimize total delay?",
+      "options": [
+        "Inject uniform buffers into duration estimates",
+        "Re-sequence based on consensus voting",
+        "Apply the algorithmic Branch and Bound technique",
+        "Force schedule compression via broad fast-tracking"
+      ],
+      "answerIndex": 2,
+      "explanation": "Branch and Bound is a discrete optimization algorithm that systematically maps alternative paths and prunes sub-optimal options to find the best path."
+    },
+    {
+      "id": "q-263",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.54 & pp.196-197 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A hospital build's deadline shifts earlier but the budget cannot increase; some critical-path activities can run simultaneously despite quality risk. Which compression technique?",
+      "options": [
+        "Schedule Crashing",
+        "Resource Leveling",
+        "Progressive elaboration",
+        "Fast-Tracking"
+      ],
+      "answerIndex": 3,
+      "explanation": "Fast-tracking runs normally-sequential activities in parallel; it adds no cost but increases risk. Crashing instead adds budget/resources."
+    },
+    {
+      "id": "q-264",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.62 & pp.121-122 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "The accounting team asks you to define baseline financial oversight: acceptable cost-estimate variance boundaries and triggers for escalating budget overruns. Which asset?",
+      "options": [
+        "Basis of Estimates",
+        "Configuration Management Plan",
+        "Financial Management Plan",
+        "Risk Management Plan triggers"
+      ],
+      "answerIndex": 2,
+      "explanation": "The financial management plan defines how costs and revenues are estimated, budgeted, monitored, and controlled, setting governance boundaries for cost performance."
+    },
+    {
+      "id": "q-265",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.62-63 & pp.122-123 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "NGOs intend to inject external capital because they benefit from the project's deployment. Where must Maya document these external capital-injection agreements?",
+      "options": [
+        "The project Funding Strategy",
+        "The Project Charter",
+        "The cost estimation spreadsheet",
+        "The OPA knowledge archive"
+      ],
+      "answerIndex": 0,
+      "explanation": "The funding strategy (output of Plan Financial Management) maps how costs are covered, documenting capital sources, structures, grants, or NGO contributions."
+    },
+    {
+      "id": "q-266",
+      "topic": "Finance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.62-63 & p.146 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "In the earliest conceptual phase with no detailed design, leadership needs a rough cost estimate fast; a veteran recalls a comparable plant build three years ago. Which technique?",
+      "options": [
+        "Bottom-Up Cost Aggregation",
+        "Parametric Cost Estimating",
+        "Three-Point PERT",
+        "Analogous Cost Estimating"
+      ],
+      "answerIndex": 3,
+      "explanation": "Analogous estimating uses historical data from a comparable past project as the benchmark; it is fast and useful when detailed design is missing."
+    },
+    {
+      "id": "q-267",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.63 & pp.158-159 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After launch, hundreds of retail units are returned for hardware failures, requiring diagnostics, repairs, and warranty replacements. How should these expenses be categorized?",
+      "options": [
+        "Internal Failure Costs",
+        "External Failure Costs",
+        "Appraisal Costs",
+        "Prevention Costs"
+      ],
+      "answerIndex": 1,
+      "explanation": "In Cost of Quality, external failure costs occur when a deliverable fails to meet standards after reaching the external customer."
+    },
+    {
+      "id": "q-268",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.63 & p.266 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A known geological risk could require deep-well foundation extensions; the sponsor wants protection without inflating primary activity baselines. What should Lena create?",
+      "options": [
+        "A management reserve buffer",
+        "A dedicated Contingency Reserve",
+        "An updated scope aggregation ledger",
+        "A separate isolated baseline variant"
+      ],
+      "answerIndex": 1,
+      "explanation": "Contingency reserves cover identified, quantified risks (\"known-unknowns\") within the cost baseline; management reserves cover unforeseen scope (\"unknown-unknowns\")."
+    },
+    {
+      "id": "q-269",
+      "topic": "Finance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.64 & p.158 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Individual activity estimates are complete; Marcus needs a single, approved, time-phased budget baseline for measuring future variance. What must he do FIRST?",
+      "options": [
+        "Perform Cost Aggregation across the WBS",
+        "Modify the Financial Management Plan",
+        "Lock the Cost Baseline",
+        "Check the business case formulas"
+      ],
+      "answerIndex": 0,
+      "explanation": "Before a cost baseline can be set, costs are aggregated: activities to work packages, to control accounts, to the baseline."
+    },
+    {
+      "id": "q-270",
+      "topic": "Finance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.64 & p.115 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Leadership calls the work-package estimates arbitrary. What document must Victor present to show the detailed logic, metrics, and assumptions behind them?",
+      "options": [
+        "The Cost Baseline",
+        "The Basis of Estimates (BOE)",
+        "The Financial Management Plan",
+        "The WBS aggregation log"
+      ],
+      "answerIndex": 1,
+      "explanation": "The Basis of Estimates documents the logic, calculations, assumptions, constraints, and variance ranges used to build an estimate."
+    },
+    {
+      "id": "q-271",
+      "topic": "Formulas/EVM",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.64-65 & p.169 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Nina needs integrated trends comparing the value of work completed to date against both the spending plan and actual cash spent. Which methodology?",
+      "options": [
+        "Earned Value Analysis (EVA)",
+        "Multi-variable Variance Analysis",
+        "Baseline progressive reconciliation",
+        "Status Report trend parsing"
+      ],
+      "answerIndex": 0,
+      "explanation": "EVA integrates scope, schedule, and cost by comparing PV, EV, and AC to assess health and forecast trends."
+    },
+    {
+      "id": "q-272",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.71 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Kevin is building his stakeholder register. Which activity is he NOT doing inside the Identify Stakeholders process?",
+      "options": [
+        "Map contact data and roles into the register",
+        "Isolate the persons/groups impacted by the project",
+        "Analyze the power, influence, and impact of each stakeholder",
+        "Develop tactical engagement strategies to manipulate support"
+      ],
+      "answerIndex": 3,
+      "explanation": "Developing engagement strategies happens later in Plan Stakeholder Engagement; Identify Stakeholders only finds, maps, and analyzes attributes."
+    },
+    {
+      "id": "q-273",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.71 & pp.141-142 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Mid-planning, a fishermen's union files an injunction because they were ignored during scoping. What should Caleb do FIRST?",
+      "options": [
+        "Write an updated Stakeholder Engagement Plan",
+        "Re-draft the Communications Management Plan",
+        "Log the entity in the Stakeholder Register",
+        "Schedule a risk analysis with the union"
+      ],
+      "answerIndex": 2,
+      "explanation": "When a missed stakeholder surfaces, first record their identity and attributes in the stakeholder register before planning communications or engagement."
+    },
+    {
+      "id": "q-274",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.71 & p.200 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Route updates trigger mixed reactions from municipal entities, retail owners, and commuters. Clara must focus limited energy on those most able to disrupt or enable the project. What step?",
+      "options": [
+        "Broadcast the register to all groups",
+        "Execute a Stakeholder Mapping technique",
+        "Schedule a requirements workshop",
+        "Generate a stakeholder requirements matrix"
+      ],
+      "answerIndex": 1,
+      "explanation": "Stakeholder mapping (e.g., Power/Interest grids) visualizes relationships and prioritizes engagement pathways."
+    },
+    {
+      "id": "q-275",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.71-72 & p.200 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "You want to evaluate how key department heads currently view a transition vs. the active leadership you need from them, and visualize the gaps to design communications. Which tool?",
+      "options": [
+        "Project Risk Register grid",
+        "Communications Management matrix",
+        "Stakeholder Engagement Assessment Matrix (SEAM)",
+        "Stakeholder classification index"
+      ],
+      "answerIndex": 2,
+      "explanation": "A SEAM maps current (C) vs. desired (D) engagement states (Unaware, Resistant, Neutral, Supportive, Leading) to reveal gaps."
+    },
+    {
+      "id": "q-276",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.72-73 & pp.117-118 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Department managers complain they were bypassed during a prior release, causing disruption. Nadia wants to fix this lack of awareness structurally. What should she develop?",
+      "options": [
+        "A stakeholder profiling log",
+        "An update to the features register",
+        "A team sprint backlog",
+        "A comprehensive Communications Management Plan"
+      ],
+      "answerIndex": 3,
+      "explanation": "The communications management plan defines how, when, by whom, and in what format information is distributed to manage stakeholder awareness and expectations."
+    },
+    {
+      "id": "q-277",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 p.73 & p.155 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Managers who would benefit from a new tool are avoiding training, missing syncs, and giving zero feedback. What diagnostic should Isabelle perform first?",
+      "options": [
+        "Add more mandatory status syncs",
+        "Re-write the Stakeholder Engagement Plan",
+        "Conduct a Communication Styles Assessment",
+        "Email formal progress reports"
+      ],
+      "answerIndex": 2,
+      "explanation": "A communication styles assessment evaluates preferred channels, frequency, and formats to re-engage unsupportive stakeholders who are tuning out standard communications."
+    },
+    {
+      "id": "q-278",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.74 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Engineering assets span the US, India, and Germany; cross-border friction drops requirements and members misinterpret text directions. What strategy should you execute?",
+      "options": [
+        "A rigid mandatory meeting attendance policy",
+        "Leverage Cultural Awareness to adapt your engagement approach",
+        "Individual video check-ins with each engineer",
+        "Boost weekly automated email frequency"
+      ],
+      "answerIndex": 1,
+      "explanation": "Across distributed, multi-regional teams, cultural awareness helps interpret behavioral and communication nuances, reducing friction and alignment gaps."
+    },
+    {
+      "id": "q-279",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.75 & p.152 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "You email a dense 20-page technical PDF every Monday, yet department heads say they are uninformed about milestones and timeline changes. What modification should you make?",
+      "options": [
+        "Transition to a Pull Communication method via a status portal",
+        "Add a secondary email verification sequence",
+        "Schedule a mandatory 2-hour Monday status block",
+        "Re-classify the department heads in the register"
+      ],
+      "answerIndex": 0,
+      "explanation": "Emailing a document is push communication and does not ensure it is read; pull communication lets stakeholders retrieve information at their convenience via a portal."
+    },
+    {
+      "id": "q-280",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.73-76 & p.196 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Over four weeks, stakeholder attendance at reviews drops and approval signatures stall. Javier wants to systematically uncover the root cause. Which tool?",
+      "options": [
+        "A Root Cause Analysis (RCA) workshop with key reps",
+        "A baseline OPA update",
+        "A rewrite of the Stakeholder Engagement Plan",
+        "An escalation review with each stakeholder's executive"
+      ],
+      "answerIndex": 0,
+      "explanation": "Monitor Stakeholder Engagement diagnoses variance; an RCA isolates why engagement behaviors are shifting so strategies can be adjusted from data."
+    },
+    {
+      "id": "q-281",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.77 & p.123 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A scripting error broadcasts a sensitive update (executive budget figures and personnel-elimination strategies) to a broad public distribution list. What should you do next?",
+      "options": [
+        "Revise the communication protocols in the plan",
+        "Adjust the stakeholder engagement categories",
+        "Log the breach in the Issue Log and execute remediation",
+        "Issue a change request to alter report fields"
+      ],
+      "answerIndex": 2,
+      "explanation": "A leak that has already happened is an issue; log it in the issue log immediately to document, track, and manage remediation before secondary process changes."
+    },
+    {
+      "id": "q-282",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.81 & p.142 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A newly formed team shows severe friction, high rework, and members blaming each other for missed steps. What should you develop with the team to set behavioral rules?",
+      "options": [
+        "A Performance Improvement Plan",
+        "A revised Resource Management Plan",
+        "A formal Team Charter",
+        "An individual interview framework"
+      ],
+      "answerIndex": 2,
+      "explanation": "A team charter establishes team values, operating guidelines, communication protocols, and conflict-resolution rules — the shared ways of working."
+    },
+    {
+      "id": "q-283",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.81 & p.194 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Engineers clash because multiple are doing overlapping tasks, each claiming authority; the team just missed a milestone. What framework should Michelle deploy?",
+      "options": [
+        "Update calendar due dates via a change request",
+        "A team exercise using a Resource Breakdown Structure",
+        "Adjust baseline durations in the schedule",
+        "Workshop a Responsibility Assignment Matrix (RACI)"
+      ],
+      "answerIndex": 3,
+      "explanation": "A RAM/RACI links work packages to people, defining who is Responsible, Accountable, Consulted, and Informed to remove role confusion and overlap."
+    },
+    {
+      "id": "q-284",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 p.81 & p.184 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Simple multi-hour configuration tasks take weeks; developers invent unnecessary code and add unrequested features because they have excess time. What principle is occurring?",
+      "options": [
+        "Fast-Tracking degradation",
+        "Resource Leveling saturation",
+        "Parkinson's Law",
+        "Gold-Plating optimization"
+      ],
+      "answerIndex": 2,
+      "explanation": "Parkinson's Law: work expands to fill the time allotted; padded estimates lead teams to lose efficiency or add unrequested scope."
+    },
+    {
+      "id": "q-285",
+      "topic": "Resources",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": true,
+      "source": "PMBOK8 p.82 & p.171 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A telecom rollout spans thousands of sites with hundreds of crew/equipment/timeline combinations, beyond human planning. Which analytical method optimizes the resource schedule?",
+      "options": [
+        "Analogous estimation formulas",
+        "AI-driven Genetic Algorithms",
+        "Bottom-Up constraint summation",
+        "Expert judgment loops"
+      ],
+      "answerIndex": 1,
+      "explanation": "Genetic algorithms are AI optimization techniques modeled on natural selection that simulate thousands of combinations to find the most efficient baseline."
+    },
+    {
+      "id": "q-286",
+      "topic": "Resources",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.82 & p.132 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "With scope frozen and sequences mapped, you have calculated the resource profiles, equipment specs, and labor quantities per work package. What asset should you generate next?",
+      "options": [
+        "A Resource Calendar",
+        "A WBS dictionary append",
+        "A Responsibility Assignment Matrix",
+        "A Resource Breakdown Structure (RBS)"
+      ],
+      "answerIndex": 3,
+      "explanation": "An RBS is a hierarchical representation of resources categorized by type/classification for tracking and managing utilization."
+    },
+    {
+      "id": "q-287",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.82-84 & p.132 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Two managers dispute who controls a specialized engineer; both claim their deadlines take precedence and refuse to authorize travel. What step should the PM take?",
+      "options": [
+        "Alter the schedule baseline to show zero access",
+        "Consult the Resource Calendars and negotiate a data-backed allocation split",
+        "Raise a change request for emergency contractor budget",
+        "Revise the Stakeholder Engagement Plan"
+      ],
+      "answerIndex": 1,
+      "explanation": "A resource calendar details availability, shifts, and constraints; reviewing it lets the PM negotiate resource sharing across departments."
+    },
+    {
+      "id": "q-288",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.84-85 & p.197 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Developers' roadblocks are ignored by line management, morale is dropping, and members argue over tasks. Which leadership approach should the PM use?",
+      "options": [
+        "Terminate or reassign the lowest performers",
+        "Update the Resource Management Plan with grades",
+        "Implement rigid daily performance tracking",
+        "Leverage Active Listening and Servant Leadership to remove impediments"
+      ],
+      "answerIndex": 3,
+      "explanation": "Servant leadership supports the team, uses active listening, and removes organizational impediments to empower self-organizing performance."
+    },
+    {
+      "id": "q-289",
+      "topic": "Agile/Adaptive",
+      "ecoDomain": "People",
+      "approach": "Agile/Hybrid",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.85 & p.194 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "After two iterations, communication disconnects and workflow friction keep choking velocity and the team fails to deliver a shippable increment. What event should Dylan facilitate?",
+      "options": [
+        "Individual technical performance grading",
+        "An extended Daily Stand-Up sequence",
+        "A formal project Retrospective",
+        "Expanded sprint planning with end users"
+      ],
+      "answerIndex": 2,
+      "explanation": "A retrospective lets the team inspect their processes, relationships, and tools and design actionable improvements."
+    },
+    {
+      "id": "q-290",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.85 & p.168 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A skilled, high-trust team halts work to get Louise's explicit approval before resolving basic operational changes, choking speed. What approach should she apply?",
+      "options": [
+        "Maintain autocratic command-and-control",
+        "Transition to a Distributed Management framework",
+        "Implement double-frequency status reports",
+        "Standardize top-down servant directives"
+      ],
+      "answerIndex": 1,
+      "explanation": "Distributed management decentralizes authority, empowering skilled cross-functional teams to self-manage operational choices and remove decision bottlenecks."
+    },
+    {
+      "id": "q-291",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.85 & p.194 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Engineers from different departments constantly challenge each other's approaches, disagreements slow progress, and priorities are frequently debated. Which Tuckman stage?",
+      "options": [
+        "Forming",
+        "Storming",
+        "Norming",
+        "Performing"
+      ],
+      "answerIndex": 1,
+      "explanation": "In Storming, members address the work but encounter interpersonal friction and clash over approaches before finding a collaborative rhythm."
+    },
+    {
+      "id": "q-292",
+      "topic": "Resources",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.85 & pp.151-152 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A team distributed across one campus uses video conferencing; misunderstandings on requirements emerge and they take too long to learn components. What strategy?",
+      "options": [
+        "Mandatory team-building sessions",
+        "Increase weekly meeting frequency",
+        "Draft more thorough requirements docs",
+        "Collocate the core project team"
+      ],
+      "answerIndex": 3,
+      "explanation": "Collocation places members in the same space to optimize face-to-face communication, build relationships, and enable passive information sharing (osmosis)."
+    },
+    {
+      "id": "q-293",
+      "topic": "Stakeholders",
+      "ecoDomain": "People",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.87 & p.152 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A regulatory stakeholder becomes resistant after missing updates; they can't attend reviews and ignore pushed emails. What modification re-engages them?",
+      "options": [
+        "An interactive communication approach",
+        "A rigid push communication protocol",
+        "A Pull Communication approach via a dedicated repository",
+        "Modify the stakeholder engagement plan baselines"
+      ],
+      "answerIndex": 2,
+      "explanation": "When a stakeholder can't process pushed items, pull communication (on-demand portal/intranet access) lets them retrieve data at their convenience."
+    },
+    {
+      "id": "q-294",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.87 & p.158 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Line managers give subjective, conflicting reports about whether certain resources are underperforming. Taylor needs objective proof to decide on intervention. Which tool?",
+      "options": [
+        "Increase direct micromanagement",
+        "Initiate an RCA workshop",
+        "Buffer the schedule baseline",
+        "Deploy Control Charts to analyze performance trends over time"
+      ],
+      "answerIndex": 3,
+      "explanation": "Control charts plot performance over time against statistical limits, giving objective, data-driven evidence of whether a trend is stable or out of bounds."
+    },
+    {
+      "id": "q-295",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.95-96 & p.134 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "During scoping, the team raises potential threats but there is no agreement on how risks will be logged, categorized, or monitored. What should Cameron develop?",
+      "options": [
+        "An immediate Risk Register",
+        "A comprehensive Risk Management Plan",
+        "Risk response blueprints",
+        "A qualitative risk matrix"
+      ],
+      "answerIndex": 1,
+      "explanation": "The risk management plan defines how risk activities are structured, funded, and performed — the governance before specific risks are captured."
+    },
+    {
+      "id": "q-296",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.96-97 & p.137 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "The team identifies several events that could compromise cost, schedule, and safety, but some members want to skip logging and move to production. What is your correct next step?",
+      "options": [
+        "Map specific response mechanics for each threat",
+        "Review threats at the next phase-gate",
+        "Run an independent risk audit",
+        "Document the identified threats in the Risk Register"
+      ],
+      "answerIndex": 3,
+      "explanation": "Identify Risks requires cataloging threats/opportunities in the risk register to track probability, impact, and status over time."
+    },
+    {
+      "id": "q-297",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.97 & p.204 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Ryan's team is new to supply chain and needs a structured, visual framework to evaluate how internal strengths can offset external hazards. Which technique?",
+      "options": [
+        "Unstructured open brainstorming",
+        "A baseline Risk Register layout",
+        "A formal Risk Audit",
+        "A matrix-based SWOT Analysis"
+      ],
+      "answerIndex": 3,
+      "explanation": "SWOT structures risk identification into internal factors (Strengths, Weaknesses) and external factors (Opportunities, Threats), guiding an inexperienced team."
+    },
+    {
+      "id": "q-298",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.96 & p.98 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Dozens of risks are identified but the constrained budget can't fund responses for all simultaneously. What process should the PM execute next?",
+      "options": [
+        "Generate fields in the Risk Register",
+        "Standardize generic response strategies",
+        "Run a Quantitative Sensitivity Analysis",
+        "Execute a Qualitative Risk Analysis to prioritize the backlog"
+      ],
+      "answerIndex": 3,
+      "explanation": "Qualitative analysis scores probability × impact to prioritize high-score risks for response while watch-listing low-score ones."
+    },
+    {
+      "id": "q-299",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.96-99 & p.203 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A threat can't be fully eliminated, but its probability and impact can be sharply reduced by running a secondary verification code script. Which response strategy is this?",
+      "options": [
+        "Mitigation",
+        "Transference",
+        "Acceptance",
+        "Escalation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Mitigation takes proactive action to reduce a threat's probability and/or impact to an acceptable threshold."
+    },
+    {
+      "id": "q-300",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.98-100 & p.116 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A pre-approved risk response requires extra work that expands the schedule and increases cost. The team is ready to deploy. What must Lorna do next?",
+      "options": [
+        "Manually alter the schedule and budget baselines",
+        "Execute the response without documentation changes",
+        "Submit a formal Change Request through change control",
+        "Inform stakeholders about the threat"
+      ],
+      "answerIndex": 2,
+      "explanation": "When a response changes approved baselines, a formal change request is required to authorize the adjustments before implementation."
+    },
+    {
+      "id": "q-301",
+      "topic": "Risk",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.98-100 & p.192 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Several risks consume much of the safety budget; the sponsor wants to know if remaining funds are mathematically sufficient for future responses. Which analysis?",
+      "options": [
+        "Risk register re-indexing",
+        "Reserve Analysis",
+        "A Risk Audit",
+        "Aggregated risk profiling"
+      ],
+      "answerIndex": 1,
+      "explanation": "Reserve analysis monitors contingency/management reserves to judge whether remaining funds suffice for outstanding risks."
+    },
+    {
+      "id": "q-302",
+      "topic": "Governance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.115 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Evelyn must identify which consumer lines will receive value, how that value will be sustained over time, and who measures benefits realization. Which document?",
+      "options": [
+        "The Project Business Case",
+        "The Stakeholder Register",
+        "The Cost-Benefit matrix",
+        "The Benefits Management Plan"
+      ],
+      "answerIndex": 3,
+      "explanation": "The benefits management plan describes how/when benefits are delivered and sustained and defines the metrics and roles to measure realization."
+    },
+    {
+      "id": "q-303",
+      "topic": "Governance",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.118 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Multiple pods use different versions of design blueprints, causing mismatched modules and rework; changes aren't tracked or audited. Which plan must Paige deploy?",
+      "options": [
+        "Configuration Management Plan",
+        "Change Management Plan",
+        "Scope Management Plan",
+        "Quality Control Checklist plan"
+      ],
+      "answerIndex": 0,
+      "explanation": "The configuration management plan defines how artifacts needing version control are identified, tracked, and kept baseline-consistent."
+    },
+    {
+      "id": "q-304",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.145 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A workshop generates hundreds of unstructured feature ideas, causing gridlock. Chloe needs to organize them into visual, categorized buckets by relationship. Which tool?",
+      "options": [
+        "Individual interviews",
+        "Nominal Group Technique voting",
+        "An open brainstorming loop",
+        "An Affinity Diagram"
+      ],
+      "answerIndex": 3,
+      "explanation": "An affinity diagram sorts large numbers of ideas into related groups by common themes for easier analysis."
+    },
+    {
+      "id": "q-305",
+      "topic": "Resources",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.171 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Nathan, a replacement PM, is unfamiliar with internal reporting tracks, department silos, and cross-functional structures, causing missed updates. Which breakdown diagram should he audit?",
+      "options": [
+        "Work Breakdown Structure",
+        "Product Breakdown Structure",
+        "Organizational Breakdown Structure (OBS)",
+        "Resource Breakdown Structure"
+      ],
+      "answerIndex": 2,
+      "explanation": "An OBS maps project activities to the specific organizational units, departments, or teams responsible for them."
+    },
+    {
+      "id": "q-306",
+      "topic": "Schedule",
+      "ecoDomain": "Process",
+      "approach": "Predictive",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.185 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Flooring demolition must wait until ceiling painting fully concludes; custom shelf assembly can begin as soon as wall painting starts. Which sequence relationships?",
+      "options": [
+        "Finish-to-Start (FS) and Start-to-Start (SS)",
+        "Start-to-Finish (SF) and Finish-to-Finish (FF)",
+        "Finish-to-Finish (FF) and Finish-to-Start (FS)",
+        "Start-to-Start (SS) and Start-to-Finish (SF)"
+      ],
+      "answerIndex": 0,
+      "explanation": "FS requires the predecessor to finish before the successor starts; SS lets the successor start once the predecessor starts."
+    },
+    {
+      "id": "q-307",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.249-250 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Stakeholders are biased toward isolated variables (lowest cost, most experienced firm, best technical score) when evaluating vendor bids. What tool should Adrian build?",
+      "options": [
+        "A Make-or-Buy grid",
+        "A Bidder Conference agenda",
+        "A Source Selection Criteria weighting matrix",
+        "A Procurement Management Plan"
+      ],
+      "answerIndex": 2,
+      "explanation": "A weighted source-selection-criteria matrix scores proposals objectively across priorities like capability, cost, delivery, and past performance."
+    },
+    {
+      "id": "q-308",
+      "topic": "Procurement",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 pp.252-253 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "A contractor files a financial claim for unexpected rock conditions; both parties want a fast, clean resolution without external legal entities. What is Sophie's correct first step?",
+      "options": [
+        "Hire an independent legal mediator",
+        "Initiate direct Negotiation with the contractor",
+        "Submit the claim to binding Arbitration",
+        "Escalate the claim to the court track"
+      ],
+      "answerIndex": 1,
+      "explanation": "In claims administration, direct negotiation between the parties is the first step before escalating to mediation, arbitration, or litigation."
+    },
+    {
+      "id": "q-309",
+      "topic": "Scope",
+      "ecoDomain": "Process",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 p.273 · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Marketing stakeholders keep requesting small undocumented feature tweaks directly to developers, who implement them without review, causing overruns and missed deadlines. What is occurring?",
+      "options": [
+        "Gold-Plating",
+        "Change Control optimization",
+        "Contractual technical debt",
+        "Scope Creep"
+      ],
+      "answerIndex": 3,
+      "explanation": "Scope creep is uncontrolled expansion of scope without adjusting time/cost/resources, caused by bypassing formal change control."
+    },
+    {
+      "id": "q-310",
+      "topic": "Finance",
+      "ecoDomain": "Business",
+      "approach": "Both",
+      "situational": true,
+      "ecoExtended": false,
+      "source": "PMBOK8 Appendix (financial selection) · via Q&A video (yt:Mipoh6YaDIo) — not independently verified",
+      "stem": "Choosing among four upgrade proposals by maximizing financial throughput via ROI — A=45%, B=90%, C=135%, D=110%. Which proposal should be selected?",
+      "options": [
+        "Proposal A",
+        "Proposal B",
+        "Proposal C",
+        "Proposal D"
+      ],
+      "answerIndex": 2,
+      "explanation": "When selecting by a financial prioritization metric (ROI/NPV/IRR), choose the option with the highest value — here C at 135%."
     }
   ]
 }
